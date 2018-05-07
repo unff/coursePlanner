@@ -1,0 +1,50 @@
+.content {
+    width: 1000px;
+    margin: auto;
+    background-color: #f0f0f0;
+}
+
+.course {
+    width: 350px;
+    height: 70px;
+    margin: auto;
+
+    background-color: #dddddd;
+
+    display: grid;
+    grid-template-areas: 'code top2 top3 proctored'
+                         'title title title title'
+                         'footLeft footCenter footCenter footRight';
+    
+}
+.code {
+    grid-area: code;
+}
+.top2 {
+    grid-area: top2;
+}
+.top3 {
+    grid-area: top3;
+}
+.proctored {
+    grid-area: proctored;
+    text-align: right;
+}
+.title {
+    grid-area: title;
+    padding-left: .5em;
+    font-size: 14pt;
+    font-weight: bold;
+}
+.footLeft {
+    grid-area: footLeft;
+    text-align: right;
+}
+.footCenter {
+    grid-area: footCenter;
+}
+.footRight {
+    grid-area: footRight;
+    text-align: right;
+
+}
