@@ -57,7 +57,7 @@ export class CourseListService {
       number: 1280,
       code: 'MATH 1280',
       name: 'Introduction to Statistics',
-      proctored: false,
+      proctored: true,
       prerequisites: [],
       description: `This course presents students with basic concepts in statistics and probability and encourages
       statistical thinking. Topics covered include descriptive statistics, probability, discrete and continuous

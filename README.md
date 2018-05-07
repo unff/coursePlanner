@@ -1,27 +1,18 @@
-# CoursePlanner
+look at appComponent:
+_dragulaService.setOptions('bag-courses', {
+      copy: false,
+      moves: (el:any, container:any, handle:any) => {
+        
+        return el.classList.contains('foundation')? false : true;
+      }
+    })
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+Use that logic to disable drag on any course that has not met it's pre-reqs.
 
-## Development server
+Have another function disable courses that have not met pre-reqs.
+Function should add a white 50% overlay on disabled courses.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Incorporate dragulaModel to keep track of what is where?  possible?
+or do we need another model to try to keep track of that?
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+May need to write our own drag/drop engine.  sucks.

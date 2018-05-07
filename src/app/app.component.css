@@ -5,7 +5,7 @@
 
 .course {
     width: 350px;
-    height: 70px;
+    height: 60px;
     margin-left: auto;
     margin-right: auto;
     margin-top: .25em;
@@ -17,9 +17,9 @@
     color: #d2d2d2;
 
     background-color: #4b345d;
-    background-image: url("../assets/uopeople-logo.png");
+    background-image: url("../assets/uopeople-logo-25.png");
     background-position: right;
-    background-size: 50px;
+    background-size: 90px;
     background-repeat: no-repeat;
 
     display: grid;
@@ -28,6 +28,9 @@
                          'footLeft footCenter footCenter footCenter footCenter footCenter footCenter footRight';
     grid-gap: .25em;
     
+}
+.course:hover {
+    cursor: grab;
 }
 .code {
     grid-area: code;
@@ -41,7 +44,8 @@
 .proctored {
     grid-area: proctored;
     text-align: right;
-    color: #e282b0;
+    font-weight: bold;
+    
 }
 .title {
     grid-area: title;
