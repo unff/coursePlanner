@@ -22,5 +22,6 @@
 
 body {
     font-family: 'vistasans', sans-serif;
-    font-size: 8pt;
+	font-size: 8pt;
+	background-color: rgb(247, 247, 239);
 }

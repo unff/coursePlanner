@@ -1,43 +1,48 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DragulaService, DragulaModule } from 'ng2-dragula/ng2-dragula';
 import { CourseListService } from './course-list.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css',"../../node_modules/dragula/dist/dragula.css"],
-  providers: [CourseListService, DragulaService]
+  providers: [CourseListService]
 })
+
 export class AppComponent {
-  title: string = 'Course Planner';
-  public courses: any = [];
-  public usedCourses: any = []
-  // options: any = {
-  //   removeOnSpill: true
-  // }
-  constructor (private _dragulaService: DragulaService, 
+  title: string = 'Bachelor of Computer Science Course Planner'
+  public courses: any = []
+  public t1Courses: any = []
+  public t2Courses: any = []
+  public t3Courses: any = []
+  public t4Courses: any = []
+  public t5Courses: any = []
+  public t6Courses: any = []
+  public t7Courses: any = []
+  public t8Courses: any = []
+  public t9Courses: any = []
+  public t10Courses: any = []
+  public spacer: any = []
+
+  constructor ( private _dragulaService: DragulaService,
                private _courselistservice: CourseListService) {
     this.courses = _courselistservice.courses;
+    this.t1Courses = _courselistservice.t1Courses;
+    this.t2Courses = _courselistservice.t2Courses;
+    this.spacer = _courselistservice.spacer;
+    // _dragulaService.setOptions('bag-courses', {
+    //   copy: false,
+    //   moves: (el:any, container:any, handle:any) => {
+    //     return el.classList.contains('foundation')? false : true;
+    //   }
+    // })
 
-    _dragulaService.setOptions('bag-courses', {
-      copy: false,
-      moves: (el:any, container:any, handle:any) => {
-        return el.classList.contains('foundation')? false : true;
-      }
-    })
-
-    _dragulaService.drop.subscribe(value => {
-      const [bagName, e, el] = value;
-      console.log("drop")
-      console.log(value)
-    })
+    // _dragulaService.drop.subscribe(value => {
+    //   const [bagName, e, el] = value;
+    // })
 
     _dragulaService.dropModel.subscribe((value) => {
       this.onDropModel(value.slice(1))
-      console.log("dropModel")
-      console.log(value)
-      console.log(this.usedCourses)
-      console.log("sliced")
-      console.log(value.slice(1))
     })
 
     _dragulaService.removeModel.subscribe((value) => {
@@ -45,14 +50,16 @@ export class AppComponent {
     })
     // _dragulaService.over.subscribe((v) => {console.log(v)})
   }
+
+  ngOnInit() {
+
+  }
+
   private onDropModel(args) {
     let [el, target, source] = args;
     // do something else
     console.log("onDropModel")
     console.log(args)
-
-    
-
   }
 
   private onRemoveModel(args) {

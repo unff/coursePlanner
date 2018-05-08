@@ -4,8 +4,18 @@ import { Injectable } from '@angular/core';
 export class CourseListService {
 
   constructor() { }
-
-  courses = [
+  spacer = {
+    category: '',
+    prefix: '',
+    number: 0,
+    code: '',
+    name: '',
+    proctored: false,
+    prerequisites: [],
+    description: '',
+    credits: 0
+  }
+  t1Courses = [
     {
       category: 'foundation',
       prefix: 'UNIV',
@@ -22,7 +32,7 @@ export class CourseListService {
       credits: 3
     },
     {
-      category: 'csMajor',
+      category: 'foundation',
       prefix: 'CS',
       number: 1101,
       code: 'CS 1101',
@@ -36,7 +46,12 @@ export class CourseListService {
       are encouraged to pay attention to these, since the way of thinking like a programmer is the most
       valuable lesson they will learn.`,
       credits: 3
-    },
+    }
+  ]
+  t2Courses = [
+    
+  ]
+  courses = [
     {
       category: 'foundation',
       prefix: 'MATH',

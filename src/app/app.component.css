@@ -1,6 +1,28 @@
+body {
+    background-color: rgb(247, 247, 239);
+}
 .wrapper {
     display: grid;
     grid-template-columns: auto auto;
+}
+.termHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.termTitle {
+    margin: 0px;
+}
+.spacer {
+    width: 350px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: .25em;
+    margin-bottom: .25em;
+    padding-left: .25em;
+    padding-right: .25em;
+    border: 3px solid rgba(45, 25, 56, .05);
 }
 
 .course {

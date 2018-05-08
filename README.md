@@ -6,13 +6,19 @@ _dragulaService.setOptions('bag-courses', {
         return el.classList.contains('foundation')? false : true;
       }
     })
-
 Use that logic to disable drag on any course that has not met it's pre-reqs.
 
-Have another function disable courses that have not met pre-reqs.
-Function should add a white 50% overlay on disabled courses.
+SOLVED: Incorporate dragulaModel to keep track of what is where?  possible? : dragulaModels courses and usedCourses are in use
 
-Incorporate dragulaModel to keep track of what is where?  possible?
-or do we need another model to try to keep track of that?
+DONE: Add a third bag div and test.
+NEXT: FUCKING SPACERS
+Add enough courses to fill (20?)
 
-May need to write our own drag/drop engine.  sucks.
+Disallow courses with unmet pre-reqs to be moved.
+Disallow courses to be moved on top of it's pre-req.
+Add a white 50% overlay on disabled courses.
+
+Deal with term blocks.  Can you cap the number of items a bag will allow?
+look into accepts() to add logic there to cap at 3
+
+ADVANCED: Save models to localStorage or chrome storage
