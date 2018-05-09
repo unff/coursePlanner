@@ -11,7 +11,9 @@ Use that logic to disable drag on any course that has not met it's pre-reqs.
 SOLVED: Incorporate dragulaModel to keep track of what is where?  possible? : dragulaModels courses and usedCourses are in use
 
 DONE: Add a third bag div and test.
-NEXT: FUCKING SPACERS
+DONE: FUCKING SPACERS - GET RID OF THEM ONCE POPULATED
+NEXT: allow only 3 per left-hand container
+
 Add enough courses to fill (20?)
 
 Disallow courses with unmet pre-reqs to be moved.

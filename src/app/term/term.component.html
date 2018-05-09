@@ -1,0 +1,17 @@
+<div class="term">
+  <div class="termHeader">
+    <h2 class="termTitle">{{title}} - {{dataModel.length}}</h2>
+  </div>
+  <div class='container' [dragula]='"bag-courses"' [dragulaModel]="dataModel" [attr.data-id]="modelID">
+    <div [ngClass]="[c.prefix == 'spacer' ? 'spacer' : 'course']"  *ngFor="let c of dataModel">
+      <div class="code" >{{c.code}}</div>
+      <div class="top2"></div>
+      <div class="top3"></div>
+      <div class="proctored"><span style="padding: .25em; background-color: rgba(233, 1, 114, .8);" *ngIf="c.proctored">proctored</span></div>
+      <div class="title" [ngStyle]="{'font-size':c.name.length < 28 ? '12pt' : '10pt'}">{{c.name}}</div>
+      <div class="footLeft"><span *ngIf="c.prerequisites.length != 0">Prerequisite:</span></div>
+      <div class="footCenter">{{c.prerequisites}}</div>
+      <div class="footRight">{{c.category}}</div>
+    </div>
+  </div>
+</div>

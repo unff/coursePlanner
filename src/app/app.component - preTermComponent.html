@@ -1,0 +1,201 @@
+<div style="text-align:center;">
+  <h1>
+    {{ title }}
+  </h1>
+</div>
+<div class="wrapper">
+  <div class="left">
+    <div class="term">
+      <div class="termHeader">
+        <h2 class="termTitle">First Term</h2>
+      </div>
+      <div class='container' [dragula]='"bag-courses"' [dragulaModel]="t1Courses">
+        <div [ngClass]="[c.prefix == 'spacer' ? 'spacer' : 'course']" *ngFor="let c of t1Courses">
+          <div class="code" >{{c.code}}</div>
+          <div class="top2"></div>
+          <div class="top3"></div>
+          <div class="proctored"><span style="padding: .25em; background-color: rgba(233, 1, 114, .8);" *ngIf="c.proctored">proctored</span></div>
+          <div class="title" [ngStyle]="{'font-size':c.name.length < 28 ? '12pt' : '10pt'}">{{c.name}}</div>
+          <div class="footLeft"><span *ngIf="c.prerequisites.length != 0">Prerequisite:</span></div>
+          <div class="footCenter">{{c.prerequisites}}</div>
+          <div class="footRight">{{c.category}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="term">
+        <div class="termHeader">
+          <h2 class="termTitle">Second Term</h2>
+        </div>
+        <div class='container' [dragula]='"bag-courses"' [dragulaModel]="t2Courses">
+          <div [ngClass]="[c.prefix == 'spacer' ? 'spacer' : 'course']" *ngFor="let c of t2Courses">
+            <div class="code" >{{c.code}}</div>
+            <div class="top2"></div>
+            <div class="top3"></div>
+            <div class="proctored"><span style="padding: .25em; background-color: rgba(233, 1, 114, .8);" *ngIf="c.proctored">proctored</span></div>
+            <div class="title" [ngStyle]="{'font-size':c.name.length < 28 ? '12pt' : '10pt'}">{{c.name}}</div>
+            <div class="footLeft"><span *ngIf="c.prerequisites.length != 0">Prerequisite:</span></div>
+            <div class="footCenter">{{c.prerequisites}}</div>
+            <div class="footRight">{{c.category}}</div>
+          </div>
+          <!-- <div class="spacer" [dragula]='"bag-courses"' *ngIf="t2Courses.length < 2"></div> -->
+      </div>
+    </div>
+    <div class="term">
+        <div class="termHeader">
+          <h2 class="termTitle">Third Term</h2>
+        </div>
+        <div class='container' [dragula]='"bag-courses"' [dragulaModel]="t3Courses">
+          <div [ngClass]="[c.prefix == 'spacer' ? 'spacer' : 'course']" *ngFor="let c of t3Courses">
+            <div class="code" >{{c.code}}</div>
+            <div class="top2"></div>
+            <div class="top3"></div>
+            <div class="proctored"><span style="padding: .25em; background-color: rgba(233, 1, 114, .8);" *ngIf="c.proctored">proctored</span></div>
+            <div class="title" [ngStyle]="{'font-size':c.name.length < 28 ? '12pt' : '10pt'}">{{c.name}}</div>
+            <div class="footLeft"><span *ngIf="c.prerequisites.length != 0">Prerequisite:</span></div>
+            <div class="footCenter">{{c.prerequisites}}</div>
+            <div class="footRight">{{c.category}}</div>
+          </div>
+          <!-- <div class="spacer" [dragula]='"bag-courses"' *ngIf="t3Courses.length < 2"></div> -->
+      </div>
+    </div>
+    <div class="term">
+        <div class="termHeader">
+          <h2 class="termTitle">Fourth Term</h2>
+        </div>
+        <div class='container' [dragula]='"bag-courses"' [dragulaModel]="t4Courses">
+          <div [ngClass]="[c.prefix == 'spacer' ? 'spacer' : 'course']" *ngFor="let c of t4Courses">
+            <div class="code" >{{c.code}}</div>
+            <div class="top2"></div>
+            <div class="top3"></div>
+            <div class="proctored"><span style="padding: .25em; background-color: rgba(233, 1, 114, .8);" *ngIf="c.proctored">proctored</span></div>
+            <div class="title" [ngStyle]="{'font-size':c.name.length < 28 ? '12pt' : '10pt'}">{{c.name}}</div>
+            <div class="footLeft"><span *ngIf="c.prerequisites.length != 0">Prerequisite:</span></div>
+            <div class="footCenter">{{c.prerequisites}}</div>
+            <div class="footRight">{{c.category}}</div>
+          </div>
+          <!-- <div class="spacer" [dragula]='"bag-asdf"' *ngIf="t4Courses.length < 2"></div> -->
+        </div>
+    </div>
+    <div class="term">
+        <div class="termHeader">
+          <h2 class="termTitle">Fifth Term</h2>
+        </div>
+        <div class='container' [dragula]='"bag-courses"' [dragulaModel]="t5Courses">
+          <div [ngClass]="[c.prefix == 'spacer' ? 'spacer' : 'course']" *ngFor="let c of t5Courses">
+            <div class="code" >{{c.code}}</div>
+            <div class="top2"></div>
+            <div class="top3"></div>
+            <div class="proctored"><span style="padding: .25em; background-color: rgba(233, 1, 114, .8);" *ngIf="c.proctored">proctored</span></div>
+            <div class="title" [ngStyle]="{'font-size':c.name.length < 28 ? '12pt' : '10pt'}">{{c.name}}</div>
+            <div class="footLeft"><span *ngIf="c.prerequisites.length != 0">Prerequisite:</span></div>
+            <div class="footCenter">{{c.prerequisites}}</div>
+            <div class="footRight">{{c.category}}</div>
+          </div>
+          <!-- <div class="spacer" [dragula]='"bag-courses"' *ngIf="t5Courses.length < 2"></div> -->
+      </div>
+    </div>
+    <div class="term">
+        <div class="termHeader">
+          <h2 class="termTitle">Sixth Term</h2>
+        </div>
+        <div class='container' [dragula]='"bag-courses"' [dragulaModel]="t6Courses">
+          <div [ngClass]="[c.prefix == 'spacer' ? 'spacer' : 'course']" *ngFor="let c of t6Courses">
+            <div class="code" >{{c.code}}</div>
+            <div class="top2"></div>
+            <div class="top3"></div>
+            <div class="proctored"><span style="padding: .25em; background-color: rgba(233, 1, 114, .8);" *ngIf="c.proctored">proctored</span></div>
+            <div class="title" [ngStyle]="{'font-size':c.name.length < 28 ? '12pt' : '10pt'}">{{c.name}}</div>
+            <div class="footLeft"><span *ngIf="c.prerequisites.length != 0">Prerequisite:</span></div>
+            <div class="footCenter">{{c.prerequisites}}</div>
+            <div class="footRight">{{c.category}}</div>
+          </div>
+          <!-- <div class="spacer" [dragula]='"bag-courses"' *ngIf="t6Courses.length < 2"></div> -->
+      </div>
+    </div>
+    <div class="term">
+        <div class="termHeader">
+          <h2 class="termTitle">Seventh Term</h2>
+        </div>
+        <div class='container' [dragula]='"bag-courses"' [dragulaModel]="t7Courses">
+          <div [ngClass]="[c.prefix == 'spacer' ? 'spacer' : 'course']" *ngFor="let c of t7Courses">
+            <div class="code" >{{c.code}}</div>
+            <div class="top2"></div>
+            <div class="top3"></div>
+            <div class="proctored"><span style="padding: .25em; background-color: rgba(233, 1, 114, .8);" *ngIf="c.proctored">proctored</span></div>
+            <div class="title" [ngStyle]="{'font-size':c.name.length < 28 ? '12pt' : '10pt'}">{{c.name}}</div>
+            <div class="footLeft"><span *ngIf="c.prerequisites.length != 0">Prerequisite:</span></div>
+            <div class="footCenter">{{c.prerequisites}}</div>
+            <div class="footRight">{{c.category}}</div>
+          </div>
+          <!-- <div class="spacer" [dragula]='"bag-courses"' *ngIf="t7Courses.length < 2"></div> -->
+      </div>
+    </div>
+    <div class="term">
+        <div class="termHeader">
+          <h2 class="termTitle">Eigth Term</h2>
+        </div>
+        <div class='container' [dragula]='"bag-courses"' [dragulaModel]="t8Courses">
+          <div [ngClass]="[c.prefix == 'spacer' ? 'spacer' : 'course']" *ngFor="let c of t8Courses">
+            <div class="code" >{{c.code}}</div>
+            <div class="top2"></div>
+            <div class="top3"></div>
+            <div class="proctored"><span style="padding: .25em; background-color: rgba(233, 1, 114, .8);" *ngIf="c.proctored">proctored</span></div>
+            <div class="title" [ngStyle]="{'font-size':c.name.length < 28 ? '12pt' : '10pt'}">{{c.name}}</div>
+            <div class="footLeft"><span *ngIf="c.prerequisites.length != 0">Prerequisite:</span></div>
+            <div class="footCenter">{{c.prerequisites}}</div>
+            <div class="footRight">{{c.category}}</div>
+          </div>
+          <!-- <div class="spacer" [dragula]='"bag-courses"' *ngIf="t8Courses.length < 2"></div> -->
+      </div>
+    </div>
+    <div class="term">
+        <div class="termHeader">
+          <h2 class="termTitle">Ninth Term</h2>
+        </div>
+        <div class='container' [dragula]='"bag-courses"' [dragulaModel]="t9Courses">
+          <div [ngClass]="[c.prefix == 'spacer' ? 'spacer' : 'course']" *ngFor="let c of t9Courses">
+            <div class="code" >{{c.code}}</div>
+            <div class="top2"></div>
+            <div class="top3"></div>
+            <div class="proctored"><span style="padding: .25em; background-color: rgba(233, 1, 114, .8);" *ngIf="c.proctored">proctored</span></div>
+            <div class="title" [ngStyle]="{'font-size':c.name.length < 28 ? '12pt' : '10pt'}">{{c.name}}</div>
+            <div class="footLeft"><span *ngIf="c.prerequisites.length != 0">Prerequisite:</span></div>
+            <div class="footCenter">{{c.prerequisites}}</div>
+            <div class="footRight">{{c.category}}</div>
+          </div>
+          <!-- <div class="spacer" [dragula]='"bag-courses"' *ngIf="t9Courses.length < 2"></div> -->
+
+      </div>
+    </div>
+    <div class="term">
+        <div class="termHeader">
+          <h2 class="termTitle">Tenth Term</h2>
+        </div>
+        <div class='container' [dragula]='"bag-courses"' [dragulaModel]="t10Courses">
+          <div [ngClass]="[c.prefix == 'spacer' ? 'spacer' : 'course']" *ngFor="let c of t10Courses">
+            <div class="code" >{{c.code}}</div>
+            <div class="top2"></div>
+            <div class="top3"></div>
+            <div class="proctored"><span style="padding: .25em; background-color: rgba(233, 1, 114, .8);" *ngIf="c.proctored">proctored</span></div>
+            <div class="title" [ngStyle]="{'font-size':c.name.length < 28 ? '12pt' : '10pt'}">{{c.name}}</div>
+            <div class="footLeft"><span *ngIf="c.prerequisites.length != 0">Prerequisite:</span></div>
+            <div class="footCenter">{{c.prerequisites}}</div>
+            <div class="footRight">{{c.category}}</div>
+          </div>
+          <!-- <div class="spacer" [dragula]='"bag-courses"' *ngIf="t10Courses.length < 2"></div> -->
+      </div>
+    </div>
+  </div>
+  <div class='container' [dragula]='"bag-courses"' [dragulaModel]="courses">
+      <div [ngClass]="[c.prefix == 'spacer' ? 'spacer' : 'course']" *ngFor="let c of courses">
+          <div class="code" >{{c.code}}</div>
+          <div class="top2"></div>
+          <div class="top3"></div>
+          <div class="proctored"><span style="padding: .25em; background-color: rgba(233, 1, 114, .8);" *ngIf="c.proctored">proctored</span></div>
+          <div class="title" [ngStyle]="{'font-size':c.name.length < 28 ? '12pt' : '10pt'}">{{c.name}}</div>
+          <div class="footLeft"><span *ngIf="c.prerequisites.length != 0">Prerequisite:</span></div>
+          <div class="footCenter">{{c.prerequisites}}</div>
+          <div class="footRight">{{c.category}}</div>
+      </div>
+  </div>
+</div>

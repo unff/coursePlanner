@@ -11,69 +11,111 @@ import { CourseListService } from './course-list.service';
 
 export class AppComponent {
   title: string = 'Bachelor of Computer Science Course Planner'
+  debug: boolean = true
   public courses: any = []
-  public t1Courses: any = []
-  public t2Courses: any = []
-  public t3Courses: any = []
-  public t4Courses: any = []
-  public t5Courses: any = []
-  public t6Courses: any = []
-  public t7Courses: any = []
-  public t8Courses: any = []
-  public t9Courses: any = []
-  public t10Courses: any = []
+  public terms = {
+    Courses: [],
+  t1Courses: [],
+  t2Courses: [],
+  t3Courses: [],
+  t4Courses: [],
+  t5Courses: [],
+  t6Courses: [],
+  t7Courses: [],
+  t8Courses: [],
+  t9Courses: [],
+  t10Courses: [],
+  }
   public spacer: any = []
-
+  
   constructor ( private _dragulaService: DragulaService,
                private _courselistservice: CourseListService) {
-    this.courses = _courselistservice.courses;
-    this.t1Courses = _courselistservice.t1Courses;
-    this.t2Courses.push(_courselistservice.spacer);
-    this.t3Courses.push(_courselistservice.spacer);
-    this.t4Courses.push(_courselistservice.spacer);
-    this.t5Courses.push(_courselistservice.spacer);
-    this.t6Courses.push(_courselistservice.spacer);
-    this.t7Courses.push(_courselistservice.spacer);
-    this.t8Courses.push(_courselistservice.spacer);
-    this.t9Courses.push(_courselistservice.spacer);
-    this.t10Courses.push(_courselistservice.spacer);
-    
-    // _dragulaService.setOptions('bag-courses', {
-    //   copy: false,
-    //   moves: (el:any, container:any, handle:any) => {
-    //     return el.classList.contains('foundation')? false : true;
-    //   }
-    // })
-
-    // _dragulaService.drop.subscribe(value => {
-    //   const [bagName, e, el] = value;
-    // })
-
-    _dragulaService.dropModel.subscribe((value) => {
-      this.onDropModel(value.slice(1))
-    })
-
-    _dragulaService.removeModel.subscribe((value) => {
-      this.onRemoveModel(value.slice(1))
-    })
-    // _dragulaService.over.subscribe((v) => {console.log(v)})
+    this.terms.Courses = _courselistservice.courses;
+    this.terms.t1Courses = _courselistservice.t1Courses;
+    this.terms.t2Courses.push(_courselistservice.spacer);
+    this.terms.t3Courses.push(_courselistservice.spacer);
+    this.terms.t4Courses.push(_courselistservice.spacer);
+    this.terms.t5Courses.push(_courselistservice.spacer);
+    this.terms.t6Courses.push(_courselistservice.spacer);
+    this.terms.t7Courses.push(_courselistservice.spacer);
+    this.terms.t8Courses.push(_courselistservice.spacer);
+    this.terms.t9Courses.push(_courselistservice.spacer);
+    this.terms.t10Courses.push(_courselistservice.spacer);
+  
+    this._dragulaService.setOptions('bag-courses', {});
   }
 
   ngOnInit() {
+    this._dragulaService.dropModel.subscribe((value) => {
+      this.onDropModel(value.slice(1))
+      this.debugLogger("dropModel")
+      this.debugLogger(value)
+    })
 
+    this._dragulaService.removeModel.subscribe((value) => {
+      this.onRemoveModel(value.slice(1))
+    })
+    this._dragulaService.drag.subscribe((value) => {
+      this.debugLogger(`drag: ${value[0]}`);
+      this.onDrag(value.slice(1));
+    });
+    this._dragulaService.drop.subscribe((value) => {
+      this.debugLogger(`drop: ${value[0]}`);
+      this.onDrop(value.slice(1));
+    });
+    this._dragulaService.over.subscribe((value) => {
+      this.debugLogger(`over: ${value[0]}`);
+      this.onOver(value.slice(1));
+    });
+    this._dragulaService.out.subscribe((value) => {
+      this.debugLogger(`out: ${value}`);
+      this.onOut(value.slice(1));
+    });
   }
+
+  private onDrag(args) {
+  let [e, el] = args;
+  // do something
+  }
+  
+  private onDrop(args) {
+    let [e, el] = args;
+    // do something
+  }
+  
+  private onOver(args) {
+    let [e, el, container] = args;
+    this.debugLogger(args)
+  }
+  
+  private onOut(args) {
+    let [e, el, container] = args;
+    this.debugLogger(args)
+  }
+
 
   private onDropModel(args) {
     let [el, target, source] = args;
     // do something else
-    console.log("onDropModel")
-    console.log(args)
+    this.debugLogger("onDropModel:")
+    this.debugLogger(source)
+    if (this.terms[target.dataset.id].length > 2) {
+      this.terms[target.dataset.id] = this.terms[target.dataset.id].filter(c => c.prefix != 'spacer')
+    }
+    if (this.terms[source.dataset.id].length < 2) {
+      this.terms[source.dataset.id] = this.terms[source.dataset.id].filter(c => c.prefix != 'spacer')
+      this.terms[source.dataset.id].push(this._courselistservice.spacer)
+    }
   }
 
   private onRemoveModel(args) {
     let [el, source] = args;
     // do something else
-    console.log("onRemoveModel")
-    console.log(args)
+  }
+
+  private debugLogger(message: any) {
+    if (this.debug) {
+      console.log(message)
+    }
   }
 }

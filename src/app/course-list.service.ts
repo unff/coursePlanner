@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+
 
 @Injectable()
 export class CourseListService {
@@ -406,5 +408,9 @@ export class CourseListService {
       credits: 3
     },
   ]
+
+  public getCourses(): Observable<any> {
+    return of(this.courses)
+  }
 
 }
