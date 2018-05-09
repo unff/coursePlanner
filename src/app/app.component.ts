@@ -37,6 +37,7 @@ export class AppComponent {
     this.t8Courses.push(_courselistservice.spacer);
     this.t9Courses.push(_courselistservice.spacer);
     this.t10Courses.push(_courselistservice.spacer);
+    
     // _dragulaService.setOptions('bag-courses', {
     //   copy: false,
     //   moves: (el:any, container:any, handle:any) => {
