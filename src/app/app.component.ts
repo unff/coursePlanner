@@ -28,8 +28,15 @@ export class AppComponent {
                private _courselistservice: CourseListService) {
     this.courses = _courselistservice.courses;
     this.t1Courses = _courselistservice.t1Courses;
-    this.t2Courses = _courselistservice.t2Courses;
-    this.spacer = _courselistservice.spacer;
+    this.t2Courses.push(_courselistservice.spacer);
+    this.t3Courses.push(_courselistservice.spacer);
+    this.t4Courses.push(_courselistservice.spacer);
+    this.t5Courses.push(_courselistservice.spacer);
+    this.t6Courses.push(_courselistservice.spacer);
+    this.t7Courses.push(_courselistservice.spacer);
+    this.t8Courses.push(_courselistservice.spacer);
+    this.t9Courses.push(_courselistservice.spacer);
+    this.t10Courses.push(_courselistservice.spacer);
     // _dragulaService.setOptions('bag-courses', {
     //   copy: false,
     //   moves: (el:any, container:any, handle:any) => {

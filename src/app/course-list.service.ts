@@ -6,7 +6,7 @@ export class CourseListService {
   constructor() { }
   spacer = {
     category: '',
-    prefix: '',
+    prefix: 'spacer',
     number: 0,
     code: '',
     name: '',

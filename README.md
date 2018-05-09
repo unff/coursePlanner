@@ -22,3 +22,5 @@ Deal with term blocks.  Can you cap the number of items a bag will allow?
 look into accepts() to add logic there to cap at 3
 
 ADVANCED: Save models to localStorage or chrome storage
+
+figured out the stupid spacers without breaking EVERYTHING.  Now I need to get rid of them once a course is populated.
