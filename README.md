@@ -13,7 +13,8 @@ SOLVED: Incorporate dragulaModel to keep track of what is where?  possible? : dr
 DONE: Add a third bag div and test.
 DONE: figured out the stupid spacers without breaking EVERYTHING.  Now I need to get rid of them once a course is populated.
 DONE: FUCKING SPACERS - GET RID OF THEM ONCE POPULATED
-NEXT: Spacers should not be draggable!
+DONE: Spacers should not be draggable!
+NEXT: Move all data to the service and share it among components.
 allow only 3 per left-hand container
 
 

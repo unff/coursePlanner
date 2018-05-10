@@ -48,6 +48,13 @@ body {
     padding-left: .25em;
     padding-right: .25em;
     border: 3px solid rgba(45, 25, 56, .05);
+    color: rgba(82,82,82,.15);
+}
+
+.spacer > .title {
+    position: relative;
+    top: 35%;
+    left: 35%;
 }
 
 .course {

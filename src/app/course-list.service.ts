@@ -11,7 +11,7 @@ export class CourseListService {
     prefix: 'spacer',
     number: 0,
     code: '',
-    name: '',
+    name: 'Empty Slot',
     proctored: false,
     prerequisites: [],
     description: '',
