@@ -9,8 +9,8 @@
       <div class="termHeader">
         <h2 class="termTitle">First Term</h2>
       </div>
-      <div class='container t1' [dragula]='"bag-courses"' [dragulaModel]="terms.t1Courses" [attr.data-id]="'t1Courses'">
-        <div [ngClass]="[c.prefix == 'spacer' ? 'spacer' : 'course']" *ngFor="let c of terms.t1Courses">
+      <div class='container t1' [dragula]='"bag-courses"' [dragulaModel]="_courselistservice.terms.t1Courses" [attr.data-id]="'t1Courses'">
+        <div [ngClass]="[c.prefix == 'spacer' ? 'spacer' : 'course']" *ngFor="let c of _courselistservice.terms.t1Courses">
           <div class="code" >{{c.code}}</div>
           <div class="top2"></div>
           <div class="top3"></div>
@@ -22,19 +22,19 @@
         </div>
       </div>
     </div>
-    <app-term [title]="'Second Term'" [dataModel]="terms.t2Courses" [modelID]="'t2Courses'"></app-term>
-    <app-term [title]="'Third Term'" [dataModel]="terms.t3Courses" [modelID]="'t3Courses'"></app-term>
-    <app-term [title]="'Fourth Term'" [dataModel]="terms.t4Courses" [modelID]="'t4Courses'"></app-term>
-    <app-term [title]="'Fifth Term'" [dataModel]="terms.t5Courses" [modelID]="'t5Courses'"></app-term>
-    <app-term [title]="'Sixth Term'" [dataModel]="terms.t6Courses" [modelID]="'t6Courses'"></app-term>
-    <app-term [title]="'Seventh Term'" [dataModel]="terms.t7Courses" [modelID]="'t7Courses'"></app-term>
-    <app-term [title]="'Eighth Term'" [dataModel]="terms.t8Courses" [modelID]="'t8Courses'"></app-term>
-    <app-term [title]="'Ninth Term'" [dataModel]="terms.t9Courses" [modelID]="'t9Courses'"></app-term>
-    <app-term [title]="'Tenth Term'" [dataModel]="terms.t10Courses" [modelID]="'t10Courses'"></app-term>
+    <app-term [title]="'Second Term'" [dataModel]="_courselistservice.terms.t2Courses" [modelID]="'t2Courses'"></app-term>
+    <app-term [title]="'Third Term'" [dataModel]="_courselistservice.terms.t3Courses" [modelID]="'t3Courses'"></app-term>
+    <app-term [title]="'Fourth Term'" [dataModel]="_courselistservice.terms.t4Courses" [modelID]="'t4Courses'"></app-term>
+    <app-term [title]="'Fifth Term'" [dataModel]="_courselistservice.terms.t5Courses" [modelID]="'t5Courses'"></app-term>
+    <app-term [title]="'Sixth Term'" [dataModel]="_courselistservice.terms.t6Courses" [modelID]="'t6Courses'"></app-term>
+    <app-term [title]="'Seventh Term'" [dataModel]="_courselistservice.terms.t7Courses" [modelID]="'t7Courses'"></app-term>
+    <app-term [title]="'Eighth Term'" [dataModel]="_courselistservice.terms.t8Courses" [modelID]="'t8Courses'"></app-term>
+    <app-term [title]="'Ninth Term'" [dataModel]="_courselistservice.terms.t9Courses" [modelID]="'t9Courses'"></app-term>
+    <app-term [title]="'Tenth Term'" [dataModel]="_courselistservice.terms.t10Courses" [modelID]="'t10Courses'"></app-term>
     
   </div>
-  <div class='container' [dragula]='"bag-courses"' [dragulaModel]="terms.Courses" [attr.data-id]="'Courses'">
-      <div [ngClass]="[c.prefix == 'spacer' ? 'spacer' : 'course']" *ngFor="let c of terms.Courses">
+  <div [dragula]='"bag-courses"' [dragulaModel]="_courselistservice.terms.Courses" [attr.data-id]="'Courses'">
+      <div [ngClass]="[c.prefix == 'spacer' ? 'spacer' : 'course']" *ngFor="let c of _courselistservice.terms.Courses">
           <div class="code" >{{c.code}}</div>
           <div class="top2"></div>
           <div class="top3"></div>

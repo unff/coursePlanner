@@ -8,20 +8,21 @@ _dragulaService.setOptions('bag-courses', {
     })
 Use that logic to disable drag on any course that has not met it's pre-reqs.
 
-SOLVED: Incorporate dragulaModel to keep track of what is where?  possible? : dragulaModels term.courses and term.termCourses
+DONE: Incorporate dragulaModel to keep track of what is where?  possible? : dragulaModels term.courses and term.termCourses
 
 DONE: Add a third bag div and test.
 DONE: figured out the stupid spacers without breaking EVERYTHING.  Now I need to get rid of them once a course is populated.
+DONE: Disallow courses with unmet pre-reqs to be moved.
 DONE: FUCKING SPACERS - GET RID OF THEM ONCE POPULATED
 DONE: Spacers should not be draggable!
-NEXT: Move all data to the service and share it among components.
+DONE: Move all data to the service and share it among components.
+NEXT: Hover cursor thing to signify that it cant be moved, maybe why.
 allow only 3 per left-hand container
 
 
 NOTES:
 Add enough courses to fill (20?)
 
-Disallow courses with unmet pre-reqs to be moved.
 Disallow courses to be moved on top of it's pre-req.
 Add a white 50% overlay on disabled courses.
 

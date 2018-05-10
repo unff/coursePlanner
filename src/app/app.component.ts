@@ -11,37 +11,11 @@ import { CourseListService } from './course-list.service'
 
 export class AppComponent {
   title: string = 'Bachelor of Computer Science Course Planner'
+  subtitle: string = ''
   debug: boolean = true
-  public courses: any = []
-  public terms = {
-    Courses: [],
-  t1Courses: [],
-  t2Courses: [],
-  t3Courses: [],
-  t4Courses: [],
-  t5Courses: [],
-  t6Courses: [],
-  t7Courses: [],
-  t8Courses: [],
-  t9Courses: [],
-  t10Courses: [],
-  }
-  public spacer: any = []
-  
+   
   constructor ( private _dragulaService: DragulaService,
                private _courselistservice: CourseListService) {
-    this.terms.Courses = _courselistservice.courses
-    this.terms.t1Courses = _courselistservice.t1Courses
-    this.terms.t2Courses.push(_courselistservice.spacer)
-    this.terms.t3Courses.push(_courselistservice.spacer)
-    this.terms.t4Courses.push(_courselistservice.spacer)
-    this.terms.t5Courses.push(_courselistservice.spacer)
-    this.terms.t6Courses.push(_courselistservice.spacer)
-    this.terms.t7Courses.push(_courselistservice.spacer)
-    this.terms.t8Courses.push(_courselistservice.spacer)
-    this.terms.t9Courses.push(_courselistservice.spacer)
-    this.terms.t10Courses.push(_courselistservice.spacer)
-  
   }
 
   ngOnInit() {
@@ -52,7 +26,7 @@ export class AppComponent {
         this.debugLogger(el)
         this.debugLogger(container)
         this.debugLogger(handle)
-        return this.isMoveable(el, container.dataset.id)
+        return this.isMoveable(el)
       }
     })
     this._dragulaService.dropModel.subscribe((value) => {
@@ -108,12 +82,14 @@ export class AppComponent {
     // do something else
     this.debugLogger("onDropModel:")
     this.debugLogger(source)
-    if (this.terms[target.dataset.id].length > 2) {
-      this.terms[target.dataset.id] = this.terms[target.dataset.id].filter(c => c.prefix != 'spacer')
+    if (this._courselistservice.terms[target.dataset.id].length > 2) {
+      this._courselistservice.terms[target.dataset.id] = this._courselistservice.terms[target.dataset.id]
+        .filter(c => c.prefix != 'spacer')
     }
-    if (this.terms[source.dataset.id].length < 2) {
-      this.terms[source.dataset.id] = this.terms[source.dataset.id].filter(c => c.prefix != 'spacer')
-      this.terms[source.dataset.id].push(this._courselistservice.spacer)
+    if (this._courselistservice.terms[source.dataset.id].length < 2) {
+      this._courselistservice.terms[source.dataset.id] = this._courselistservice.terms[source.dataset.id]
+        .filter(c => c.prefix != 'spacer')
+      this._courselistservice.terms[source.dataset.id].push(this._courselistservice.spacer)
     }
   }
 
@@ -122,12 +98,16 @@ export class AppComponent {
     // do something else
   }
 
-  private isMoveable(el, model) {
+  private isMoveable(el) {
+    console.log("app.isMoveable:")
+    console.log(el)
     if (el.classList.contains('spacer')) return false;
     // get pre-req code from DOM. don't judge me.
     let preReq = el.getElementsByClassName("footCenter")[0].innerText
-    let unusedCourses = this.terms.Courses.map(e => {return e.code})
-    if (unusedCourses.includes(preReq)) return false
+    let unusedCourses = this._courselistservice.terms.Courses.map(e => {return e.code})
+    if (unusedCourses.includes(preReq)) {
+      return false
+    }
     return true;
   }
 
