@@ -7,7 +7,8 @@ export class CourseListService {
 
   constructor() { }
   spacer = {
-    category: '',
+    id: 'spacer',
+		category: '',
     prefix: 'spacer',
     number: 0,
     code: '',
@@ -20,7 +21,8 @@ export class CourseListService {
   terms = {
     t1Courses : [
       {
-        category: 'foundation',
+        id: 'UNIV1001',
+				category: 'foundation',
         prefix: 'UNIV',
         number: 1101,
         code: 'UNIV 1001',
@@ -35,7 +37,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'foundation',
+        id: 'CS1101',
+				category: 'foundation',
         prefix: 'CS',
         number: 1101,
         code: 'CS 1101',
@@ -63,7 +66,8 @@ export class CourseListService {
 
     Courses : [
       {
-        category: 'foundation',
+        id: 'MATH1201',
+				category: 'foundation',
         prefix: 'MATH',
         number: 1201,
         code: 'MATH 1201',
@@ -77,7 +81,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'foundation',
+        id: 'MATH1280',
+				category: 'foundation',
         prefix: 'MATH',
         number: 1280,
         code: 'MATH 1280',
@@ -91,7 +96,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'csMajor',
+        id: 'CS1102',
+				category: 'csMajor',
         prefix: 'CS',
         number: 1102,
         code: 'CS 1102',
@@ -105,7 +111,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'csMajor',
+        id: 'CS1103',
+				category: 'csMajor',
         prefix: 'CS',
         number: 1103,
         code: 'CS 1103',
@@ -121,7 +128,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'csMajor',
+        id: 'CS1104',
+				category: 'csMajor',
         prefix: 'CS',
         number: 1104,
         code: 'CS 1104',
@@ -138,7 +146,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'csMajor',
+        id: 'CS2203',
+				category: 'csMajor',
         prefix: 'CS',
         number: 2203,
         code: 'CS 2203',
@@ -151,7 +160,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'csMajor',
+        id: 'CS2204',
+				category: 'csMajor',
         prefix: 'CS',
         number: 2204,
         code: 'CS 2204',
@@ -165,7 +175,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'csMajor',
+        id: 'CS2205',
+				category: 'csMajor',
         prefix: 'CS',
         number: 2205,
         code: 'CS 2205',
@@ -178,7 +189,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'csMajor',
+        id: 'CS2301',
+				category: 'csMajor',
         prefix: 'CS',
         number: 2301,
         code: 'CS 2301',
@@ -192,7 +204,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'csMajor',
+        id: 'CS2401',
+				category: 'csMajor',
         prefix: 'CS',
         number: 2401,
         code: 'CS 2401',
@@ -209,7 +222,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'csMajor',
+        id: 'CS3303',
+				category: 'csMajor',
         prefix: 'CS',
         number: 3303,
         code: 'CS 3303',
@@ -228,7 +242,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'csMajor',
+        id: 'CS3304',
+				category: 'csMajor',
         prefix: 'CS',
         number: 3304,
         code: 'CS 3304',
@@ -241,7 +256,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'csMajor',
+        id: 'CS3305',
+				category: 'csMajor',
         prefix: 'CS',
         number: 3305,
         code: 'CS 3305',
@@ -255,7 +271,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'csMajor',
+        id: 'CS3306',
+				category: 'csMajor',
         prefix: 'CS',
         number: 3306,
         code: 'CS 3306',
@@ -268,7 +285,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'csMajor',
+        id: 'CS3307',
+				category: 'csMajor',
         prefix: 'CS',
         number: 3307,
         code: 'CS 3307',
@@ -281,7 +299,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'csMajor',
+        id: 'CS3308',
+				category: 'csMajor',
         prefix: 'CS',
         number: 3308,
         code: 'CS 3308',
@@ -294,7 +313,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'csMajor',
+        id: 'CS4402',
+				category: 'csMajor',
         prefix: 'CS',
         number: 4402,
         code: 'CS 4402',
@@ -307,7 +327,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'csMajor',
+        id: 'CS4403',
+				category: 'csMajor',
         prefix: 'CS',
         number: 4403,
         code: 'CS 4403',
@@ -320,7 +341,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'csMajor',
+        id: 'CS4404',
+				category: 'csMajor',
         prefix: 'CS',
         number: 4404,
         code: 'CS 4404',
@@ -336,7 +358,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'csMajor',
+        id: 'CS4405',
+				category: 'csMajor',
         prefix: 'CS',
         number: 4405,
         code: 'CS 4405',
@@ -348,7 +371,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'csMajor',
+        id: 'CS4406',
+				category: 'csMajor',
         prefix: 'CS',
         number: 4406,
         code: 'CS 4406',
@@ -361,7 +385,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'csMajor',
+        id: 'CS4407',
+				category: 'csMajor',
         prefix: 'CS',
         number: 4407,
         code: 'CS 4407',
@@ -374,7 +399,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'csMajor',
+        id: 'CS4408',
+				category: 'csMajor',
         prefix: 'CS',
         number: 4408,
         code: 'CS 4408',
@@ -386,7 +412,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'elective',
+        id: 'MATH1302',
+				category: 'elective',
         prefix: 'MATH',
         number: 1302,
         code: 'MATH 1302',
@@ -400,7 +427,8 @@ export class CourseListService {
         credits: 3
       },
       {
-        category: 'elective',
+        id: 'MATH1211',
+				category: 'elective',
         prefix: 'MATH',
         number: 1211,
         code: 'MATH 1211',

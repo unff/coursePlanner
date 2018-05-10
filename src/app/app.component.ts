@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, DoCheck, AfterViewInit, AfterViewChecked } from '@angular/core'
 import { DragulaService, DragulaModule } from 'ng2-dragula/ng2-dragula'
 import { CourseListService } from './course-list.service'
 
@@ -16,6 +16,12 @@ export class AppComponent {
    
   constructor ( private _dragulaService: DragulaService,
                private _courselistservice: CourseListService) {
+  }
+
+  ngAfterViewInit() {
+    console.log("ngAfterViewInit()")
+    this.unmetPrereq()
+
   }
 
   ngOnInit() {
@@ -54,6 +60,10 @@ export class AppComponent {
       this.debugLogger(`out: ${value}`)
       this.onOut(value.slice(1))
     })
+  }
+
+  ngDoCheck() {
+    //console.log("Do Check!")
   }
 
   private onDrag(args) {
@@ -109,6 +119,15 @@ export class AppComponent {
       return false
     }
     return true;
+  }
+
+  private unmetPrereq() {
+    for (let c of this._courselistservice.terms.Courses) {
+      if (this._courselistservice.terms.Courses.findIndex(p => p.code == c.prerequisites[0]) > 0){
+        let d = document.getElementById(c.id)
+        d.classList.add('disabled')
+      }
+    }
   }
 
   // need a function to remove courses with unmet pre-reqs

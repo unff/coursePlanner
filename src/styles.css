@@ -81,10 +81,16 @@ body {
                          'title title title title title title title title'
                          'footLeft footCenter footCenter footCenter footCenter footCenter footCenter footRight';
     grid-gap: .25em;
+
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
     
 }
 .course:hover {
     cursor: grab;
+    background-color: rgba(75,52,93,.8);
 }
 .code {
     grid-area: code;
@@ -110,14 +116,16 @@ body {
 .footLeft {
     grid-area: footLeft;
     text-align: right;
-    
 }
 .footCenter {
     grid-area: footCenter;
-  
 }
 .footRight {
     grid-area: footRight;
     text-align: right;
+}
 
+.disabled:hover {
+    cursor: not-allowed;
+    background-color: rgba(175,52,93,.7);
 }

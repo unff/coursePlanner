@@ -16,7 +16,8 @@ DONE: Disallow courses with unmet pre-reqs to be moved.
 DONE: FUCKING SPACERS - GET RID OF THEM ONCE POPULATED
 DONE: Spacers should not be draggable!
 DONE: Move all data to the service and share it among components.
-NEXT: Hover cursor thing to signify that it cant be moved, maybe why.
+DONE: Hover cursor thing to signify that it cant be moved, 
+NEXT: Looking into providing a reason why it cannot be moved.
 allow only 3 per left-hand container
 
 
@@ -30,3 +31,7 @@ Deal with term blocks.  Can you cap the number of items a bag will allow?
 look into accepts() to add logic there to cap at 3
 
 ADVANCED: Save models to localStorage or chrome storage
+
+
+DONE: need a function to add a disabled class to courses with unmet pre-reqs
+need a function to move classes with unmet pre-reqs back to terms.Courses
