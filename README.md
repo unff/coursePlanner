@@ -16,8 +16,11 @@ DONE: Disallow courses with unmet pre-reqs to be moved.
 DONE: FUCKING SPACERS - GET RID OF THEM ONCE POPULATED
 DONE: Spacers should not be draggable!
 DONE: Move all data to the service and share it among components.
-DONE: Hover cursor thing to signify that it cant be moved, 
-NEXT: Looking into providing a reason why it cannot be moved.
+DONE: Hover cursor thing to signify that it cant be moved.
+DONE: Re-run the unmetPreReq() on DropModel()
+NEXT: Look into providing a reason why it cannot be moved.
+      - add a span with hidden text visible on hover
+      - https://css-tricks.com/forums/topic/show-text-on-hover-with-css/
 allow only 3 per left-hand container
 
 
