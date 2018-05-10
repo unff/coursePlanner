@@ -39,6 +39,7 @@ export class AppComponent {
       this.onDropModel(value.slice(1))
       this.debugLogger("dropModel")
       this.debugLogger(value)
+      this.unmetPrereq()
     })
 
     this._dragulaService.removeModel.subscribe((value) => {
@@ -126,6 +127,9 @@ export class AppComponent {
       if (this._courselistservice.terms.Courses.findIndex(p => p.code == c.prerequisites[0]) > 0){
         let d = document.getElementById(c.id)
         d.classList.add('disabled')
+      } else {
+        let d = document.getElementById(c.id)
+        d.classList.remove('disabled')
       }
     }
   }
