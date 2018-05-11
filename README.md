@@ -31,7 +31,8 @@ DONE-ISH: Look into providing a reason why it cannot be moved.
 DONE: incorporate autoscroll  
 DONE: allow only 3 per left-hand container  
 DONE: find out why calculus isn't processing its prereq correctly.  
-NEXT: sticky sidebar for credit counting  
+NEXT: Deal with this hoek vulnerability nonsense  
+sticky sidebar for credit counting  
 turn sidebar into a component  
 move sidebar data to courseServiceList  
 make sidebar work from Observables  
