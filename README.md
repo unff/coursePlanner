@@ -25,6 +25,9 @@ DONE: incorporate autoscroll
 DONE: allow only 3 per left-hand container
 DONE: find out why calculus isn't processing its prereq correctly.
 NEXT: sidebar for credit counting
+turn sidebar into a component
+move sidebar data to courseServiceList
+make sidebar work from Observables
 
 NOTES:
 Add enough courses to fill (20?)
