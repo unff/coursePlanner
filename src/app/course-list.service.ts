@@ -818,6 +818,7 @@ export class CourseListService {
   }
 
   public updateBreakdown() {
+    for (let e of this.breakdown) e = 0  //? maybe this will reset breakdown?
     // call this on every onDropModel()
     for (let term in this.terms){
       for (let c of term) {
