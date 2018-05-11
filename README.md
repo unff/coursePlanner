@@ -1,5 +1,5 @@
-# UoPeople course planner
-### and eventually graduation calculator, just not yet
+## UoPeople course planner
+### (and eventually graduation calculator, just not yet)
 
 This is an Angular 6 application I did for practice. It's got a static data model and doesn't do anything fun with any external APIs.  
 
@@ -49,7 +49,7 @@ make sidebar work from Observables
 course cant exist in the same container as it's pre-req  
 if a course is removed, also remove any courses that have it as a prereq  
   
-###NOTES:  
+### Notes:  
 Add enough courses to fill (20?)  
   
 calculus wasn't processing because it's pre-req was index 0 and I was checking anything greater than zero.  swapped to -1.  
