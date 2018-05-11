@@ -818,6 +818,7 @@ export class CourseListService {
   }
 
   public updateBreakdown() {
+    // call this on every onDropModel()
     for (let term in this.terms){
       for (let c of term) {
         // the guts.  update this.breakdown here for each course
