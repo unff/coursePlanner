@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { AppComponent } from '../app.component'
 import { CourseListService } from '../course-list.service'
 
@@ -16,14 +16,6 @@ export class TermComponent implements OnInit {
     // console.log(this.dataModel)
    }
 
-  ngOnInit() {
-    // console.log('onInit')
-    // console.log(this.dataModel)
-  }
-
-  ngOnChanges(changes: SimpleChanges) {
-    // console.log("onChanges fired")
-    // console.log(changes)
-  }
+  ngOnInit() {}
 
 }

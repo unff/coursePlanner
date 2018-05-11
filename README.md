@@ -30,14 +30,18 @@ DONE: incorporate autoscroll
 DONE: allow only 3 per left-hand container  
 DONE: find out why calculus isn't processing its prereq correctly.  
 DONE: clean up course codes  
-NEXT: sticky sidebar for credit counting  
-turn sidebar into a component  
-make the course requirement layout more intuitive  
-move sidebar data to courseServiceList? Maybe?    
-make sidebar work from Observables  
+DONE: sticky sidebar for credit counting  
+DONE: turn sidebar into a component  
+DONE: make the course requirement layout more intuitive  
+DONE: move sidebar data to courseServiceList? Maybe?    
 course cant exist in the same container as it's pre-req  
 if a course is removed, also remove any courses that have it as a prereq  
 improve styles on unmet prereqs on hover (hard to read)
+
+#### Phase Two:
+incorporate persistence (localStorage or Chrome Storage or FireBase or something)
+incorporate grade tracking
+make the model react to grades (allow third course if GPA > 3.x)
   
 #### Notes:  
 look at appComponent: 

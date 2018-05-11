@@ -7,17 +7,7 @@ export class CourseListService {
 
   constructor() { }
 
-  breakdown: any = {
-    totalCredits: 0,
-    foundation: 0,
-    writing: 0,
-    values: 0,
-    civ: 0,
-    disciplinary: 0,
-    humanities: 0,
-    sbs: 0,
-    nst: 0
-  }
+  
   
   spacer = {
     id: 'spacer',
@@ -817,14 +807,37 @@ export class CourseListService {
     return of(this["Courses"])
   }
 
+  breakdown: any = {
+    totalCredits: 0,
+    foundation: 0,
+    writing: 0,
+    values: 0,
+    civ: 0,
+    disciplinary: 0,
+    humanities: 0,
+    sbs: 0,
+    nst: 0
+  }
+
   public updateBreakdown() {
-    for (let e of this.breakdown) e = 0  //? maybe this will reset breakdown?
+    for (let e in this.breakdown) this.breakdown[e] = 0  // this will reset breakdown so we can re-build it
     // call this on every onDropModel()
     for (let term in this.terms){
-      for (let c of term) {
+      for (let c of this.terms[term]) {
         // the guts.  update this.breakdown here for each course
+        this.breakdown.totalCredits += c.credits
+        if (c.category == 'foundation') this.breakdown.foundation++
+        if (c.category == 'writing') this.breakdown.writing++
+        if (c.category == 'values') this.breakdown.values++
+        if (c.category == 'civ') this.breakdown.civ++
+        if (c.category == 'disciplinary') this.breakdown.disciplinary++
+        if (c.category == 'humanities') this.breakdown.humanities++
+        if (c.category == 'SBS') this.breakdown.sbs++
+        if (c.category == 'NST') this.breakdown.nst++
+
       }
     }
+    this.breakdown.disciplinary = this.breakdown.humanities + this.breakdown.sbs + this.breakdown.nst
   }
 
 }

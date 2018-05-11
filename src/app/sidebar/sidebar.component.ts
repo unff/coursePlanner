@@ -8,7 +8,7 @@ import { CourseListService } from '../course-list.service'
 })
 export class SidebarComponent implements OnInit {
  
-  constructor(private _courseListService : CourseListService) { }
+  constructor(public _courseListService : CourseListService) { }
 
   ngOnInit() {
 

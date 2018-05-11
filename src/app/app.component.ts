@@ -21,21 +21,18 @@ export class AppComponent {
   }
 
   ngAfterViewInit() {
-    // console.log("ngAfterViewInit()")
+    // this.debugLogger("ngAfterViewInit()")
     this.unmetPrereq()
 
   }
 
   ngOnInit() {
+    this._courselistservice.updateBreakdown()
     let t = this._dragulaService  // don't ask.  I'm missing something in scope apparently.
 
     this._dragulaService.setOptions('bag-courses', {
       copy: false,
       moves: (el:any, container:any, handle:any) => {
-        this.debugLogger("moves:")
-        this.debugLogger(el)
-        this.debugLogger(container)
-        this.debugLogger(handle)
         return this.isMoveable(el)
       },
       accepts: (el: any, target: any, source: any, sibling: any) => {
@@ -44,8 +41,6 @@ export class AppComponent {
     })
     this._dragulaService.dropModel.subscribe((value) => {
       this.onDropModel(value.slice(1))
-      this.debugLogger("dropModel")
-      this.debugLogger(value)
       this.unmetPrereq()
     })
 
@@ -88,15 +83,10 @@ export class AppComponent {
   }
 
   ngDoCheck() {
-    //console.log("Do Check!")
+    //this.debugLogger("Do Check!")
   }
 
   private checkForMax(el, target, source, sibling) {
-    console.log("accepts: ")
-    // console.log('el: ',el)
-    console.log('target: ',target.dataset.id)
-    // console.log('source: ',source)
-    // console.log('sibling', sibling)
     // SPECIAL CASES
     if (target.dataset.id == 'Courses') return true
     if (target.dataset.id == 't1Courses') return false
@@ -118,22 +108,20 @@ export class AppComponent {
   
   private onOver(args) {
     let [e, el, container] = args
-    // this.debugLogger(args)
+    // do something
     
   }
   
   private onOut(args) {
     let [e, el, container] = args
-    this.debugLogger(args)
+    // do something
   }
 
 
   private onDropModel(args) {
+    this._courselistservice.updateBreakdown()
     let [el, target, source] = args
     // do something else
-    //if (source.dataset.id == 'Courses') return false
-    this.debugLogger("onDropModel:")
-    this.debugLogger(source)
     // Remove spacer element from target if there are 2 courses in it
     if (target.dataset.id != 'Courses'){ // Need some isolation as Courses is no longer part of terms[]
       if (this._courselistservice.terms[target.dataset.id].length > 2) {
@@ -156,8 +144,6 @@ export class AppComponent {
   }
 
   private isMoveable(el) {
-    // console.log("app.isMoveable:")
-    // console.log(el)
     if (el.classList.contains('spacer')) return false;
     // get pre-req code from DOM. don't judge me.
     let preReq = el.getElementsByClassName("footCenter")[0].innerText
