@@ -15,7 +15,6 @@ ng serve
 
 #### Dev Tasks  
 DONE: Incorporate dragulaModel to keep track of what is where?  possible? : dragulaModels term.courses and term.termCourses  
-  
 DONE: Add a third bag div and test.  
 DONE: figured out the stupid spacers without breaking EVERYTHING.  Now I need to get rid of them once a course is populated.  
 DONE: Disallow courses with unmet pre-reqs to be moved.  
@@ -27,18 +26,18 @@ DONE: Re-run the unmetPreReq() on DropModel()
 DONE: need a function to add a .disabled to courses with unmet pre-reqs  
 DONE-ISH: Look into providing a reason why it cannot be moved.  
       - add a span with hidden text visible on hover  
-  
 DONE: incorporate autoscroll  
 DONE: allow only 3 per left-hand container  
-DONE: find out why calculus isn't processing its prereq correctly.  
-DONE: Deal with this hoek vulnerability nonsense  
+DONE: find out why calculus isn't processing its prereq correctly. 
+DONE: clean up course codes
 NEXT: sticky sidebar for credit counting  
 turn sidebar into a component  
+make the course requirement layout more intuitive
 move sidebar data to courseServiceList  
 make sidebar work from Observables  
-allow re-ordering in the same term container
 course cant exist in the same container as it's pre-req  
 if a course is removed, also remove any courses that have it as a prereq  
+improve styles on unmet prereqs on hover (hard to read)
   
 #### Notes:  
 look at appComponent: 
@@ -67,5 +66,6 @@ ADVANCED: Save models to localStorage or chrome storage
   
 https://css-tricks.com/forums/topic/show-text-on-hover-with-css/  
   
-  
+ why did I wrap the data inside another object? service["thing"] works just as well as service.data["thing"]  
+ 
 need a function to move classes with unmet pre-reqs back to terms.Courses  

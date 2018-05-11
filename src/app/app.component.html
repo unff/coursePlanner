@@ -18,10 +18,20 @@
     <app-term [title]="'Eighth Term'" [dataModel]="_courselistservice.terms.t8Courses" [modelID]="'t8Courses'"></app-term>
     <app-term [title]="'Ninth Term'" [dataModel]="_courselistservice.terms.t9Courses" [modelID]="'t9Courses'"></app-term>
     <app-term [title]="'Tenth Term'" [dataModel]="_courselistservice.terms.t10Courses" [modelID]="'t10Courses'"></app-term>
+    <app-term [title]="'Eleventh Term'" [dataModel]="_courselistservice.terms.t11Courses" [modelID]="'t11Courses'"></app-term>
+    <app-term [title]="'Twelfth Term'" [dataModel]="_courselistservice.terms.t12Courses" [modelID]="'t12Courses'"></app-term>
+    <app-term [title]="'Thirteenth Term'" [dataModel]="_courselistservice.terms.t13Courses" [modelID]="'t13Courses'"></app-term>
+    <app-term [title]="'Fourteenth Term'" [dataModel]="_courselistservice.terms.t14Courses" [modelID]="'t14Courses'"></app-term>
+    <app-term [title]="'Fifteenth Term'" [dataModel]="_courselistservice.terms.t15Courses" [modelID]="'t15Courses'"></app-term>
+    <app-term [title]="'Sixteenth Term'" [dataModel]="_courselistservice.terms.t16Courses" [modelID]="'t16Courses'"></app-term>
+    <app-term [title]="'Seventeenth Term'" [dataModel]="_courselistservice.terms.t17Courses" [modelID]="'t17Courses'"></app-term>
+    <app-term [title]="'Eighteenth Term'" [dataModel]="_courselistservice.terms.t18Courses" [modelID]="'t18Courses'"></app-term>
+    <app-term [title]="'Nineteenth Term'" [dataModel]="_courselistservice.terms.t19Courses" [modelID]="'t19Courses'"></app-term>
+    <app-term [title]="'Twentieth Term'" [dataModel]="_courselistservice.terms.t20Courses" [modelID]="'t20Courses'"></app-term>
     
   </div>
-  <div id="courseList" [dragula]='"bag-courses"' [dragulaModel]="_courselistservice.terms.Courses" [attr.data-id]="'Courses'">
-      <div id="{{c.id}}" [ngClass]="[c.prefix == 'spacer' ? 'spacer' : 'course']" *ngFor="let c of _courselistservice.terms.Courses">
+  <div id="courseList" [dragula]='"bag-courses"' [dragulaModel]="_courselistservice.Courses" [attr.data-id]="'Courses'">
+      <div id="{{c.id}}" [ngClass]="[c.prefix == 'spacer' ? 'spacer' : 'course']" *ngFor="let c of _courselistservice.Courses">
           <div class="code" >{{c.code}}</div>
           <div class="top2"></div>
           <div class="top3"></div>
@@ -36,3 +46,4 @@
       </div>
   </div>
 </div>
+<app-sidebar></app-sidebar>

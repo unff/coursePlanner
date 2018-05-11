@@ -17,7 +17,7 @@ export class AppComponent {
   scroll: any
    
   constructor ( private _dragulaService: DragulaService,
-               private _courselistservice: CourseListService) {
+               public _courselistservice: CourseListService) {
   }
 
   ngAfterViewInit() {
@@ -131,16 +131,22 @@ export class AppComponent {
   private onDropModel(args) {
     let [el, target, source] = args
     // do something else
+    //if (source.dataset.id == 'Courses') return false
     this.debugLogger("onDropModel:")
     this.debugLogger(source)
-    if (this._courselistservice.terms[target.dataset.id].length > 2) {
-      this._courselistservice.terms[target.dataset.id] = this._courselistservice.terms[target.dataset.id]
+    // Remove spacer element from target if there are 2 courses in it
+    if (target.dataset.id != 'Courses'){ // Need some isolation as Courses is no longer part of terms[]
+      if (this._courselistservice.terms[target.dataset.id].length > 2) {
+        this._courselistservice.terms[target.dataset.id] = this._courselistservice.terms[target.dataset.id]
         .filter(c => c.prefix != 'spacer')
+      }
     }
-    if (this._courselistservice.terms[source.dataset.id].length < 2) {
-      this._courselistservice.terms[source.dataset.id] = this._courselistservice.terms[source.dataset.id]
-        .filter(c => c.prefix != 'spacer')
-      this._courselistservice.terms[source.dataset.id].push(this._courselistservice.spacer)
+    if (source.dataset.id != 'Courses'){ // Need some isolation as Courses is no longer part of terms[]
+      if (this._courselistservice.terms[source.dataset.id].length < 2) {
+        this._courselistservice.terms[source.dataset.id] = this._courselistservice.terms[source.dataset.id]
+          .filter(c => c.prefix != 'spacer')
+        this._courselistservice.terms[source.dataset.id].push(this._courselistservice.spacer)
+      }
     }
   }
 
@@ -155,7 +161,7 @@ export class AppComponent {
     if (el.classList.contains('spacer')) return false;
     // get pre-req code from DOM. don't judge me.
     let preReq = el.getElementsByClassName("footCenter")[0].innerText
-    let unusedCourses = this._courselistservice.terms.Courses.map(e => {return e.code})
+    let unusedCourses = this._courselistservice.Courses.map(e => {return e.code})
     if (unusedCourses.includes(preReq)) {
       return false
     }
@@ -163,8 +169,8 @@ export class AppComponent {
   }
 
   private unmetPrereq() {
-    for (let c of this._courselistservice.terms.Courses) {
-      if (this._courselistservice.terms.Courses.findIndex(p => p.code == c.prerequisites[0]) > -1){
+    for (let c of this._courselistservice.Courses) {
+      if (this._courselistservice.Courses.findIndex(p => p.code == c.prerequisites[0]) > -1){
         let d = document.getElementById(c.id)
         d.classList.add('disabled')
       } else {

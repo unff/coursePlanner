@@ -6,9 +6,11 @@ import { Observable, of } from 'rxjs';
 export class CourseListService {
 
   constructor() { }
+
   spacer = {
     id: 'spacer',
-		category: '',
+    category: '',
+    subcategory: '',
     prefix: 'spacer',
     number: 0,
     code: '',
@@ -18,11 +20,13 @@ export class CourseListService {
     description: '',
     credits: 0
   }
+ 
   terms = {
     t1Courses : [
       {
         id: 'UNIV1001',
-				category: 'foundation',
+        category: 'foundation',
+        subcategory: '',
         prefix: 'UNIV',
         number: 1101,
         code: 'UNIV 1001',
@@ -38,7 +42,8 @@ export class CourseListService {
       },
       {
         id: 'CS1101',
-				category: 'foundation',
+        category: 'csMajor',
+        subcategory: '',
         prefix: 'CS',
         number: 1101,
         code: 'CS 1101',
@@ -54,6 +59,7 @@ export class CourseListService {
         credits: 3
       }
     ],
+
     t2Courses : [this.spacer],
     t3Courses : [this.spacer],
     t4Courses : [this.spacer],
@@ -63,11 +69,22 @@ export class CourseListService {
     t8Courses : [this.spacer],
     t9Courses : [this.spacer],
     t10Courses : [this.spacer],
-
-    Courses : [
+    t11Courses : [this.spacer],
+    t12Courses : [this.spacer],
+    t13Courses : [this.spacer],
+    t14Courses : [this.spacer],
+    t15Courses : [this.spacer],
+    t16Courses : [this.spacer],
+    t17Courses : [this.spacer],
+    t18Courses : [this.spacer],
+    t19Courses : [this.spacer],
+    t20Courses : [this.spacer]
+  }
+    Courses = [
       {
         id: 'MATH1201',
-				category: 'foundation',
+        category: 'foundation',
+        subcategory: '',
         prefix: 'MATH',
         number: 1201,
         code: 'MATH 1201',
@@ -82,7 +99,8 @@ export class CourseListService {
       },
       {
         id: 'MATH1280',
-				category: 'foundation',
+        category: 'foundation',
+        subcategory: '',
         prefix: 'MATH',
         number: 1280,
         code: 'MATH 1280',
@@ -97,7 +115,8 @@ export class CourseListService {
       },
       {
         id: 'CS1102',
-				category: 'csMajor',
+        category: 'csMajor',
+        subcategory: '',
         prefix: 'CS',
         number: 1102,
         code: 'CS 1102',
@@ -112,7 +131,8 @@ export class CourseListService {
       },
       {
         id: 'CS1103',
-				category: 'csMajor',
+        category: 'csMajor',
+        subcategory: '',
         prefix: 'CS',
         number: 1103,
         code: 'CS 1103',
@@ -129,7 +149,8 @@ export class CourseListService {
       },
       {
         id: 'CS1104',
-				category: 'csMajor',
+        category: 'csMajor',
+        subcategory: '',
         prefix: 'CS',
         number: 1104,
         code: 'CS 1104',
@@ -147,7 +168,8 @@ export class CourseListService {
       },
       {
         id: 'CS2203',
-				category: 'csMajor',
+        category: 'csMajor',
+        subcategory: '',
         prefix: 'CS',
         number: 2203,
         code: 'CS 2203',
@@ -161,7 +183,8 @@ export class CourseListService {
       },
       {
         id: 'CS2204',
-				category: 'csMajor',
+        category: 'csMajor',
+        subcategory: '',
         prefix: 'CS',
         number: 2204,
         code: 'CS 2204',
@@ -176,7 +199,8 @@ export class CourseListService {
       },
       {
         id: 'CS2205',
-				category: 'csMajor',
+        category: 'csMajor',
+        subcategory: '',
         prefix: 'CS',
         number: 2205,
         code: 'CS 2205',
@@ -190,7 +214,8 @@ export class CourseListService {
       },
       {
         id: 'CS2301',
-				category: 'csMajor',
+        category: 'csMajor',
+        subcategory: '',
         prefix: 'CS',
         number: 2301,
         code: 'CS 2301',
@@ -205,7 +230,8 @@ export class CourseListService {
       },
       {
         id: 'CS2401',
-				category: 'csMajor',
+        category: 'csMajor',
+        subcategory: '',
         prefix: 'CS',
         number: 2401,
         code: 'CS 2401',
@@ -223,7 +249,8 @@ export class CourseListService {
       },
       {
         id: 'CS3303',
-				category: 'csMajor',
+        category: 'csMajor',
+        subcategory: '',
         prefix: 'CS',
         number: 3303,
         code: 'CS 3303',
@@ -243,7 +270,8 @@ export class CourseListService {
       },
       {
         id: 'CS3304',
-				category: 'csMajor',
+        category: 'csMajor',
+        subcategory: '',
         prefix: 'CS',
         number: 3304,
         code: 'CS 3304',
@@ -257,7 +285,8 @@ export class CourseListService {
       },
       {
         id: 'CS3305',
-				category: 'csMajor',
+        category: 'csMajor',
+        subcategory: '',
         prefix: 'CS',
         number: 3305,
         code: 'CS 3305',
@@ -272,7 +301,8 @@ export class CourseListService {
       },
       {
         id: 'CS3306',
-				category: 'csMajor',
+        category: 'csMajor',
+        subcategory: '',
         prefix: 'CS',
         number: 3306,
         code: 'CS 3306',
@@ -286,7 +316,8 @@ export class CourseListService {
       },
       {
         id: 'CS3307',
-				category: 'csMajor',
+        category: 'csMajor',
+        subcategory: '',
         prefix: 'CS',
         number: 3307,
         code: 'CS 3307',
@@ -300,7 +331,8 @@ export class CourseListService {
       },
       {
         id: 'CS3308',
-				category: 'csMajor',
+        category: 'csMajor',
+        subcategory: '',
         prefix: 'CS',
         number: 3308,
         code: 'CS 3308',
@@ -314,7 +346,8 @@ export class CourseListService {
       },
       {
         id: 'CS4402',
-				category: 'csMajor',
+        category: 'csMajor',
+        subcategory: '',
         prefix: 'CS',
         number: 4402,
         code: 'CS 4402',
@@ -328,7 +361,8 @@ export class CourseListService {
       },
       {
         id: 'CS4403',
-				category: 'csMajor',
+        category: 'csMajor',
+        subcategory: '',
         prefix: 'CS',
         number: 4403,
         code: 'CS 4403',
@@ -342,7 +376,8 @@ export class CourseListService {
       },
       {
         id: 'CS4404',
-				category: 'csMajor',
+        category: 'csMajor',
+        subcategory: '',
         prefix: 'CS',
         number: 4404,
         code: 'CS 4404',
@@ -359,7 +394,8 @@ export class CourseListService {
       },
       {
         id: 'CS4405',
-				category: 'csMajor',
+        category: 'csMajor',
+        subcategory: '',
         prefix: 'CS',
         number: 4405,
         code: 'CS 4405',
@@ -372,7 +408,8 @@ export class CourseListService {
       },
       {
         id: 'CS4406',
-				category: 'csMajor',
+        category: 'csMajor',
+        subcategory: '',
         prefix: 'CS',
         number: 4406,
         code: 'CS 4406',
@@ -386,7 +423,8 @@ export class CourseListService {
       },
       {
         id: 'CS4407',
-				category: 'csMajor',
+        category: 'csMajor',
+        subcategory: '',
         prefix: 'CS',
         number: 4407,
         code: 'CS 4407',
@@ -400,7 +438,8 @@ export class CourseListService {
       },
       {
         id: 'CS4408',
-				category: 'csMajor',
+        category: 'csMajor',
+        subcategory: '',
         prefix: 'CS',
         number: 4408,
         code: 'CS 4408',
@@ -413,7 +452,8 @@ export class CourseListService {
       },
       {
         id: 'MATH1302',
-				category: 'elective',
+        category: 'elective',
+        subcategory: '',
         prefix: 'MATH',
         number: 1302,
         code: 'MATH 1302',
@@ -428,7 +468,8 @@ export class CourseListService {
       },
       {
         id: 'MATH1211',
-				category: 'elective',
+        category: 'elective',
+        subcategory: '',
         prefix: 'MATH',
         number: 1211,
         code: 'MATH 1211',
@@ -445,7 +486,8 @@ export class CourseListService {
       },
       {
         id: 'AHIST1401',
-      category: 'elective',
+        category: 'humanities',
+        subcategory: '',
         prefix: 'AHIST',
         number: 1401,
         code: 'AHIST 1401',
@@ -457,10 +499,11 @@ export class CourseListService {
         various media and purposes of artistic production. The relationship of the visual arts and the individual
         artist to their society and culture will also be explored.`,
         credits: 3
-    },
-    {
+      },
+      {
         id: 'BIOL1121',
-      category: 'elective',
+        category: 'NST',
+        subcategory: '',
         prefix: 'BIOL',
         number: 1121,
         code: 'BIOL 1121',
@@ -476,10 +519,11 @@ export class CourseListService {
         as a prerequisite to the study of biology at the organism or population level and as a general
         introduction to how biological knowledge is being produced.`,
         credits: 3
-    },
-    {
+      },
+      {
         id: 'BUS1105',
-      category: 'elective',
+        category: 'elective',
+        subcategory: '',
         prefix: 'BUS',
         number: 1105,
         code: 'BUS 1105',
@@ -493,10 +537,11 @@ export class CourseListService {
         the tools to function in a cross-cultural, global business environment and will develop an
         understanding of the best techniques for successful communication in varying business contexts.`,
         credits: 3
-    },
-    {
+      },
+      {
         id: 'PSYC1205',
-      category: 'elective',
+        category: 'SBS',
+        subcategory: '',
         prefix: 'PSYC',
         number: 1205,
         code: 'PSYC 1205',
@@ -510,10 +555,11 @@ export class CourseListService {
         basic skill levels, and how to experiment with techniques that facilitate dealing with others of varying
         emotional backgrounds and competency levels.`,
         credits: 3
-    },
-    {
+      },
+      {
         id: 'ENGL0101',
         category: 'elective',
+        subcategory: '',
         prefix: 'ENGL',
         number: 101,
         code: 'ENGL 0101',
@@ -532,10 +578,11 @@ export class CourseListService {
         additional time only. Students who do not earn a passing grade on the second try are not eligible for
         regular admission and are dismissed without appeal.`,
         credits: 3
-    },
-    {
+      },
+      {
         id: 'ENGL1102',
-      category: 'elective',
+        category: 'writing',
+        subcategory: '',
         prefix: 'ENGL',
         number: 1102,
         code: 'ENGL 1102',
@@ -548,10 +595,11 @@ export class CourseListService {
         writing, with an emphasis on the academic research paper and its components. By the end of the
         course students will produce a paper of collegiate quality.`,
         credits: 3
-    },
-    {
+      },
+      {
         id: 'PHIL1404',
-      category: 'elective',
+        category: 'values',
+        subcategory: '',
         prefix: 'PHIL',
         number: 1404,
         code: 'PHIL 1404',
@@ -562,10 +610,11 @@ export class CourseListService {
         implications of unethical behavior. Current professional ethics as well as cultural values will be
         analyzed, and students will be asked to reconcile these `,
         credits: 3
-    },
-    {
+      },
+      {
         id: 'POLS 1503',
-      category: 'elective',
+        category: 'SBS',
+        subcategory: '',
         prefix: 'POLS',
         number: 1503,
         code: 'POLS 1503',
@@ -577,10 +626,11 @@ export class CourseListService {
         health, poverty, and wealth. The cross-cultural context affords the opportunity to address issues of a
         global nature which may profoundly influence the conditions under which people live and work.`,
         credits: 3
-    },
-    {
+      },
+      {
         id: 'HIST1421',
-      category: 'elective',
+        category: 'civilization',
+        subcategory: '',
         prefix: 'HIST',
         number: 1421,
         code: 'HIST 1421',
@@ -591,10 +641,11 @@ export class CourseListService {
         and fall of the Roman Empire. Students will address the question: In what ways did Greek and Roman
         civilization provide the foundations for the development of western culture?`,
         credits: 3
-    },
-    {
+      },
+      {
         id: 'BIOL1301',
-      category: 'elective',
+        category: 'NST',
+        subcategory: '',
         prefix: 'BIOL',
         number: 1301,
         code: 'BIOL 1301',
@@ -608,10 +659,11 @@ export class CourseListService {
         grows, develops, and reproduces; how life responds to the environment to maintain internal stability;
         and how life evolves and adapts to the environment.`,
         credits: 3
-    },
-    {
+      },
+      {
         id: 'ECON1580',
-      category: 'elective',
+        category: 'SBS',
+        subcategory: '',
         prefix: 'ECON',
         number: 1580,
         code: 'ECON 1580',
@@ -623,10 +675,11 @@ export class CourseListService {
         relations between business organizations and government regulatory agencies, optimal allocation of
         resources, price stability and long-term growth.`,
         credits: 3
-    },
-    {
+      },
+      {
         id: 'ENVS1301',
-      category: 'elective',
+        category: 'NST',
+        subcategory: '',
         prefix: 'ENVS',
         number: 1301,
         code: 'ENVS 1301',
@@ -641,10 +694,11 @@ export class CourseListService {
         environmental waste or pollutants affecting land, water and air and lastly environmental economics,
         ethics, policy and sustainable living.`,
         credits: 3
-    },
-    {
+      },
+      {
         id: 'PSYC1111',
-      category: 'elective',
+        category: 'SBS',
+        subcategory: '',
         prefix: 'PSYC',
         number: 1111,
         code: 'PSYC 1111',
@@ -660,10 +714,11 @@ export class CourseListService {
         stress, pain and chronic conditions such as obesity, coronary heart disease and HIV; the role of gender
         on health; and health outcomes in terms of quality of life and life expectancy.`,
         credits: 3
-    },
-    {
+      },
+      {
         id: 'PHIL1402',
-      category: 'elective',
+        category: 'humanities',
+        subcategory: '',
         prefix: 'PHIL',
         number: 1402,
         code: 'PHIL 1402',
@@ -676,10 +731,11 @@ export class CourseListService {
         about the most basic problems faced by ordinary people and students are encouraged to examine the
         ideas of the philosophers as they impact their own lives.`,
         credits: 3
-    },
-    {
+      },
+      {
         id: 'PSYC1504',
-      category: 'elective',
+        category: 'SBS',
+        subcategory: '',
         prefix: 'PSYC',
         number: 1504,
         code: 'PSYC 1504',
@@ -691,10 +747,11 @@ export class CourseListService {
         processes and behavior and will facilitate better understanding of the relationship between mind and
         body, and the self and other.`,
         credits: 3
-    },
-    {
+      },
+      {
         id: 'SOC1502',
-      category: 'elective',
+        category: 'SBS',
+        subcategory: '',
         prefix: 'SOC',
         number: 1502,
         code: 'SOC 1502',
@@ -707,10 +764,11 @@ export class CourseListService {
         will have the opportunity to analyze what we know and what we think we know as citizens, individuals,
         and as novice sociologists.`,
         credits: 3
-    },
-    {
+      },
+      {
         id: 'MATH1281',
-      category: 'elective',
+        category: 'elective',
+        subcategory: '',
         prefix: 'MATH',
         number: 1281,
         code: 'MATH 1281',
@@ -723,10 +781,11 @@ export class CourseListService {
         are demonstrated via simulations rather than by abstract proofs. The R system for data analysis is used
         as part of the teaching.`,
         credits: 3
-    },
-    {
+      },
+      {
         id: 'ENGL1405',
-      category: 'elective',
+        category: 'humanities',
+        subcategory: '',
         prefix: 'ENGL',
         number: 1405,
         code: 'ENGL 1405',
@@ -739,12 +798,11 @@ export class CourseListService {
         both practical and practice-based research in the area of world literature. Literary selections from a
         number of different cultures are introduced.`,
         credits: 3
-    }
+      }
     ]
-  }
 
   public getCourses(): Observable<any> {
-    return of(this.terms.Courses)
+    return of(this["Courses"])
   }
 
 }

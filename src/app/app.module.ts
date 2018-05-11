@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 import { DragulaModule } from 'ng2-dragula';
 import { AppComponent } from './app.component';
 import { TermComponent } from './term/term.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TermComponent
+    TermComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
