@@ -28,7 +28,7 @@ DONE-ISH: Look into providing a reason why it cannot be moved.
       - add a span with hidden text visible on hover  
 DONE: incorporate autoscroll  
 DONE: allow only 3 per left-hand container  
-DONE: find out why calculus isn't processing its prereq correctly. 
+DONE: find out why calculus isn't processing its prereq correctly.  
 DONE: clean up course codes
 NEXT: sticky sidebar for credit counting  
 turn sidebar into a component  
