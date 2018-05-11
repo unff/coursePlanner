@@ -12,7 +12,7 @@ import autoScroll from 'dom-autoscroller';
 
 export class AppComponent {
   title: string = 'Bachelor of Computer Science Course Planner'
-  subtitle: string = 'Drag from the course list on the right into the terms on the left.'
+  subtitle: string = 'Drag from the course list on the right into the term slots on the left.'
   debug: boolean = false
   scroll: any
    
