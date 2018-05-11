@@ -150,7 +150,7 @@ body {
     background-color: rgba(75,52,93,1);
     position: fixed;
     left: 0;
-    top: 30%;
+    top: 10%;
 }
 
 .icon-bar a {
@@ -160,6 +160,15 @@ body {
     transition: all 0.3s ease; /* Add transition for hover effects */
     color: white; /* White text color */
     font-size: 36px; /* Increased font-size */
+}
+
+.icon-bar .sidebarBlock {
+    display: block; /* Make the links appear below each other instead of side-by-side */
+    text-align: center; /* Center-align text */
+    padding: 16px; /* Add some padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 12pt; /* Increased font-size */
 }
 
 .icon-bar a:hover {

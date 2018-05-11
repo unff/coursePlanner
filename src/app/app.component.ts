@@ -100,7 +100,8 @@ export class AppComponent {
     // SPECIAL CASES
     if (target.dataset.id == 'Courses') return true
     if (target.dataset.id == 't1Courses') return false
-    if (this._courselistservice.terms[target.dataset.id].length > 1) return false
+    if (target.dataset.id == 't2Courses' && this._courselistservice.terms["t2Courses"]
+        .filter(c => c.prefix != 'spacer').length > 1) return false
     // NOT SO SPECIAL CASES
     return this._courselistservice.terms[target.dataset.id].length > 2 ? false : true
   }
