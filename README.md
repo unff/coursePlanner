@@ -32,8 +32,8 @@ DONE: find out why calculus isn't processing its prereq correctly.
 DONE: clean up course codes
 NEXT: sticky sidebar for credit counting  
 turn sidebar into a component  
-make the course requirement layout more intuitive
-move sidebar data to courseServiceList  
+make the course requirement layout more intuitive  
+move sidebar data to courseServiceList? Maybe?    
 make sidebar work from Observables  
 course cant exist in the same container as it's pre-req  
 if a course is removed, also remove any courses that have it as a prereq  
