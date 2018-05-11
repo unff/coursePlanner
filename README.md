@@ -10,7 +10,7 @@ npm install
 ng serve
 ```
 
-# Notes and ongoing tasks:
+# Dev notes and ongoing tasks:
 
 look at appComponent: 
 ```javascript 
@@ -23,7 +23,8 @@ _dragulaService.setOptions('bag-courses', {
     })  
 ```
 Use that logic to disable drag on any course that has not met it's pre-reqs.  
-  
+
+### Dev Tasks  
 DONE: Incorporate dragulaModel to keep track of what is where?  possible? : dragulaModels term.courses and term.termCourses  
   
 DONE: Add a third bag div and test.  
@@ -48,7 +49,7 @@ make sidebar work from Observables
 course cant exist in the same container as it's pre-req  
 if a course is removed, also remove any courses that have it as a prereq  
   
-NOTES:  
+###NOTES:  
 Add enough courses to fill (20?)  
   
 calculus wasn't processing because it's pre-req was index 0 and I was checking anything greater than zero.  swapped to -1.  
