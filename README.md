@@ -32,6 +32,7 @@ turn sidebar into a component
 move sidebar data to courseServiceList  
 make sidebar work from Observables  
 course cant exist in the same container as it's pre-req  
+if a course is removed, also remove any courses that have it as a prereq
   
 NOTES:  
 Add enough courses to fill (20?)  
