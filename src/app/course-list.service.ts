@@ -443,6 +443,303 @@ export class CourseListService {
         both abstract and real world applications. `,
         credits: 3
       },
+      {
+        id: 'AHIST1401',
+      category: 'elective',
+        prefix: 'AHIST',
+        number: 1401,
+        code: 'AHIST 1401',
+        name: 'Art History',
+        proctored: false,
+        prerequisites: [],
+        description: `This survey course in Western Art History will explore art as a cultural production. This introduction to
+        the academic discipline will familiarize students with major movements and styles of art as well as the
+        various media and purposes of artistic production. The relationship of the visual arts and the individual
+        artist to their society and culture will also be explored.`,
+        credits: 3
+    },
+    {
+        id: 'BIOL1121',
+      category: 'elective',
+        prefix: 'BIOL',
+        number: 1121,
+        code: 'BIOL 1121',
+        name: 'Biology 1 for Health Studies Majors',
+        proctored: false,
+        prerequisites: [],
+        description: `This course introduces main concepts in biology that are common to most living organisms. It covers
+        topics in biochemistry, cell biology, and genetics, which illustrate how molecules are organized into
+        cells. Cells constitute the basic unit of life, and genes are central to information flow within and
+        between cells. In addition, this course makes use of assignments to introduce experimental methods
+        and research data repositories. Through these activities, students learn how to approach a complex
+        problem and find information relevant to a specific question or method. This course is designed both
+        as a prerequisite to the study of biology at the organism or population level and as a general
+        introduction to how biological knowledge is being produced.`,
+        credits: 3
+    },
+    {
+        id: 'BUS1105',
+      category: 'elective',
+        prefix: 'BUS',
+        number: 1105,
+        code: 'BUS 1105',
+        name: 'Business Communications',
+        proctored: false,
+        prerequisites: [],
+        description: `The purpose of this course is to build an understanding of effective uses of English in a business
+        environment and to develop strong core business communication skills. This course will introduce and
+        enhance the varying modes of English communication in the business environment and will also focus
+        on when to use these varying modes, depending on the situation. This course will also give students
+        the tools to function in a cross-cultural, global business environment and will develop an
+        understanding of the best techniques for successful communication in varying business contexts.`,
+        credits: 3
+    },
+    {
+        id: 'PSYC1205',
+      category: 'elective',
+        prefix: 'PSYC',
+        number: 1205,
+        code: 'PSYC 1205',
+        name: 'Emotional Intelligence',
+        proctored: false,
+        prerequisites: [],
+        description: `This course examines the concepts and practical applications of emotional intelligence. Emotional
+        intelligence is the ability to manage one's own internal emotional environment and one's ability to
+        participate in relationships with others. Through a highly interactive format, the course will focus on
+        how to assess basic skills in emotional intelligence, how to develop strategies to improve and enhance
+        basic skill levels, and how to experiment with techniques that facilitate dealing with others of varying
+        emotional backgrounds and competency levels.`,
+        credits: 3
+    },
+    {
+        id: 'ENGL0101',
+        category: 'elective',
+        prefix: 'ENGL',
+        number: 101,
+        code: 'ENGL 0101',
+        name: 'English Composition 1',
+        proctored: true,
+        prerequisites: [],
+        description: `UoPeople offers an alternative route for demonstrating English language proficiency for international
+        students who are not from an English-speaking country and whose high school language of instruction
+        was not English and/or have not demonstrated that they possess the minimum level of required
+        competency. They may be provisionally admitted to take this preparatory course that provides a
+        review of reading, grammar, and writing prior to taking a qualifying examination. Students must
+        successfully pass all aspects of the course, pass the qualifying examination at the end of the course,
+        and earn a comprehensive overall grade of 73% or higher to be eligible to be admitted as a non-degree
+        student to take regular courses. Students whose final grade is less than a 73% will not pass the course
+        but will be eligible to take ENGL 0101 English Composition 1 and the qualifying examination one
+        additional time only. Students who do not earn a passing grade on the second try are not eligible for
+        regular admission and are dismissed without appeal.`,
+        credits: 3
+    },
+    {
+        id: 'ENGL1102',
+      category: 'elective',
+        prefix: 'ENGL',
+        number: 1102,
+        code: 'ENGL 1102',
+        name: 'English Composition 2',
+        proctored: true,
+        prerequisites: [],
+        description: `This course is designed to foster skills in critical reading and thinking, and in the production and
+        evaluation of purposeful academic writing. Students are introduced to literary genres, rhetorical
+        patterns in writing, and the use and citation of research sources. They gain practice in clear, effective
+        writing, with an emphasis on the academic research paper and its components. By the end of the
+        course students will produce a paper of collegiate quality.`,
+        credits: 3
+    },
+    {
+        id: 'PHIL1404',
+      category: 'elective',
+        prefix: 'PHIL',
+        number: 1404,
+        code: 'PHIL 1404',
+        name: 'Ethics and Social Responsibility',
+        proctored: false,
+        prerequisites: [],
+        description: `This course explores Western and non-Western approaches to ethical reasoning, and the social
+        implications of unethical behavior. Current professional ethics as well as cultural values will be
+        analyzed, and students will be asked to reconcile these `,
+        credits: 3
+    },
+    {
+        id: 'POLS 1503',
+      category: 'elective',
+        prefix: 'POLS',
+        number: 1503,
+        code: 'POLS 1503',
+        name: 'Globalization',
+        proctored: false,
+        prerequisites: [],
+        description: `This course examines changes in national economies over the past half century. Special attention is
+        given to the ways that globalization impacts citizenship, ethnic and religious issues, migration, public
+        health, poverty, and wealth. The cross-cultural context affords the opportunity to address issues of a
+        global nature which may profoundly influence the conditions under which people live and work.`,
+        credits: 3
+    },
+    {
+        id: 'HIST1421',
+      category: 'elective',
+        prefix: 'HIST',
+        number: 1421,
+        code: 'HIST 1421',
+        name: 'Greek and Roman Civilization',
+        proctored: false,
+        prerequisites: [],
+        description: `The course includes selected readings from Homer, Plato’s Dialogues, and a brief description of the rise
+        and fall of the Roman Empire. Students will address the question: In what ways did Greek and Roman
+        civilization provide the foundations for the development of western culture?`,
+        credits: 3
+    },
+    {
+        id: 'BIOL1301',
+      category: 'elective',
+        prefix: 'BIOL',
+        number: 1301,
+        code: 'BIOL 1301',
+        name: 'Introduction to Biology',
+        proctored: false,
+        prerequisites: [],
+        description: `This introductory course defines biology and its relationship to other sciences. We examine the
+        overarching theories of life from biological research and also explore the fundamental concepts and
+        principles of the study of living organisms and their interaction with the environment. We will examine
+        how life is organized into hierarchical levels; how living organisms use and produce energy; how life
+        grows, develops, and reproduces; how life responds to the environment to maintain internal stability;
+        and how life evolves and adapts to the environment.`,
+        credits: 3
+    },
+    {
+        id: 'ECON1580',
+      category: 'elective',
+        prefix: 'ECON',
+        number: 1580,
+        code: 'ECON 1580',
+        name: 'Introduction to Economics',
+        proctored: false,
+        prerequisites: [],
+        description: `This course provides an introduction to economics as well as an overview of macroeconomics and
+        microeconomics. Course topics include the operations of a market economy, money and banking, the
+        relations between business organizations and government regulatory agencies, optimal allocation of
+        resources, price stability and long-term growth.`,
+        credits: 3
+    },
+    {
+        id: 'ENVS1301',
+      category: 'elective',
+        prefix: 'ENVS',
+        number: 1301,
+        code: 'ENVS 1301',
+        name: 'Introduction to Environmental Sciences',
+        proctored: false,
+        prerequisites: [],
+        description: `This is a multidisciplinary course that will bring together data collected from various scientific fields to
+        help students understand the environment, current environmental problems and solutions to these
+        problems. The course will cover topics that include biodiversity conservation, agriculture-related
+        environmental impacts, environmental effects of human populations and urbanization, the
+        consequences of society’s dependence on fossil fuel and solutions using alternative energy sources,
+        environmental waste or pollutants affecting land, water and air and lastly environmental economics,
+        ethics, policy and sustainable living.`,
+        credits: 3
+    },
+    {
+        id: 'PSYC1111',
+      category: 'elective',
+        prefix: 'PSYC',
+        number: 1111,
+        code: 'PSYC 1111',
+        name: 'Introduction to Health Psychology',
+        proctored: false,
+        prerequisites: [],
+        description: `Psychology is defined as the scientific study of the human mind and its functions, especially those
+        affecting behavior in a given context. This course will draw upon health psychology, public health, and
+        community psychology to emphasize how psychology contributes to overall health, as well as the
+        cause, progression, and outcomes of physical illness. This course will highlight the many roles that
+        psychology plays in health and illness including, the role of health behaviors and behavior change;
+        beliefs about illness; symptom perception; help-seeking and communication with health professions;
+        stress, pain and chronic conditions such as obesity, coronary heart disease and HIV; the role of gender
+        on health; and health outcomes in terms of quality of life and life expectancy.`,
+        credits: 3
+    },
+    {
+        id: 'PHIL1402',
+      category: 'elective',
+        prefix: 'PHIL',
+        number: 1402,
+        code: 'PHIL 1402',
+        name: 'Introduction to Philosophy',
+        proctored: false,
+        prerequisites: [],
+        description: `This course traces the origins of philosophical thinking from Socrates and Plato in Ancient Greece to
+        great thinkers of modern times. The profound questions they posed about reality, ethics, and
+        knowledge still challenges us today. This course emphasizes how philosophy is a manner of thinking
+        about the most basic problems faced by ordinary people and students are encouraged to examine the
+        ideas of the philosophers as they impact their own lives.`,
+        credits: 3
+    },
+    {
+        id: 'PSYC1504',
+      category: 'elective',
+        prefix: 'PSYC',
+        number: 1504,
+        code: 'PSYC 1504',
+        name: 'Introduction to Psychology',
+        proctored: false,
+        prerequisites: [],
+        description: `This course covers the basic principles of psychology, its common approaches, and its theoretical
+        underpinnings. As both a research and applied discipline, Psychology involves the study of mental
+        processes and behavior and will facilitate better understanding of the relationship between mind and
+        body, and the self and other.`,
+        credits: 3
+    },
+    {
+        id: 'SOC1502',
+      category: 'elective',
+        prefix: 'SOC',
+        number: 1502,
+        code: 'SOC 1502',
+        name: 'Introduction to Sociology',
+        proctored: false,
+        prerequisites: [],
+        description: `This course studies and compares social groups and institutions and their interrelationships. Special
+        topics covered in the course include culture, socialization, deviance, stratification, race, ethnicity, social
+        changes, and collective behavior. As an introduction to the scientific discipline of Sociology, students
+        will have the opportunity to analyze what we know and what we think we know as citizens, individuals,
+        and as novice sociologists.`,
+        credits: 3
+    },
+    {
+        id: 'MATH1281',
+      category: 'elective',
+        prefix: 'MATH',
+        number: 1281,
+        code: 'MATH 1281',
+        name: 'Statistical Inference',
+        proctored: false,
+        prerequisites: ['MATH 1280'],
+        description: `This course covers inferential statistics, estimation, and hypothesis testing. The emphasis in the course
+        is on the presentation of statistical methods and on the interpretation of the outcome. The philosophy
+        and practice of statistics and not its mathematics is at the center. Needed mathematical computations
+        are demonstrated via simulations rather than by abstract proofs. The R system for data analysis is used
+        as part of the teaching.`,
+        credits: 3
+    },
+    {
+        id: 'ENGL1405',
+      category: 'elective',
+        prefix: 'ENGL',
+        number: 1405,
+        code: 'ENGL 1405',
+        name: 'World Literature',
+        proctored: false,
+        prerequisites: [],
+        description: `This course is designed to introduce students to the structural concepts of world literature and to how
+        to read critically with an emphasis on analysis and synthesis. The course will focus on both verbal and
+        visual literacy via critical reading exercises. By the end of the course, the student will have conducted
+        both practical and practice-based research in the area of world literature. Literary selections from a
+        number of different cultures are introduced.`,
+        credits: 3
+    }
     ]
   }
 

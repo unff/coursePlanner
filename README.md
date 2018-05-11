@@ -13,16 +13,18 @@ DONE: Incorporate dragulaModel to keep track of what is where?  possible? : drag
 DONE: Add a third bag div and test.
 DONE: figured out the stupid spacers without breaking EVERYTHING.  Now I need to get rid of them once a course is populated.
 DONE: Disallow courses with unmet pre-reqs to be moved.
-DONE: FUCKING SPACERS - GET RID OF THEM ONCE POPULATED
+DONE: F***ING SPACERS - GET RID OF THEM ONCE POPULATED
 DONE: Spacers should not be draggable!
 DONE: Move all data to the service and share it among components.
 DONE: Hover cursor thing to signify that it cant be moved.
 DONE: Re-run the unmetPreReq() on DropModel()
-NEXT: Look into providing a reason why it cannot be moved.
+DONE-ISH: Look into providing a reason why it cannot be moved.
       - add a span with hidden text visible on hover
       - https://css-tricks.com/forums/topic/show-text-on-hover-with-css/
-allow only 3 per left-hand container
-
+DONE: incorporate autoscroll
+DONE: allow only 3 per left-hand container
+DONE: find out why calculus isn't processing its prereq correctly.
+NEXT: sidebar for credit counting
 
 NOTES:
 Add enough courses to fill (20?)
