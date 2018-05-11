@@ -1,3 +1,17 @@
+# UoPeople course planner
+### and eventually graduation calculator, just not yet
+
+This is an Angular 6 application I did for practice. It's got a static data model and doesn't do anything fun with any external APIs.  
+
+### Installation
+```
+git clone https://github.com/unff/coursePlanner.git  
+npm install
+ng serve
+```
+
+# Notes and ongoing tasks:
+
 look at appComponent: 
 ```javascript 
 _dragulaService.setOptions('bag-courses', {  
@@ -32,7 +46,7 @@ turn sidebar into a component
 move sidebar data to courseServiceList  
 make sidebar work from Observables  
 course cant exist in the same container as it's pre-req  
-if a course is removed, also remove any courses that have it as a prereq
+if a course is removed, also remove any courses that have it as a prereq  
   
 NOTES:  
 Add enough courses to fill (20?)  
