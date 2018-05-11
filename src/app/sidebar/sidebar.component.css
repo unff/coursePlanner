@@ -28,3 +28,11 @@
 .icon-bar a:hover {
     background-color: #000; /* Add a hover color */
 }
+
+.subcat {
+    background-color: rgba(255,255,255,.1);
+}
+
+.long {
+    font-size: 10pt;
+}

@@ -7,6 +7,18 @@ export class CourseListService {
 
   constructor() { }
 
+  breakdown: any = {
+    totalCredits: 0,
+    foundation: 0,
+    writing: 0,
+    values: 0,
+    civ: 0,
+    disciplinary: 0,
+    humanities: 0,
+    sbs: 0,
+    nst: 0
+  }
+  
   spacer = {
     id: 'spacer',
     category: '',
@@ -803,6 +815,14 @@ export class CourseListService {
 
   public getCourses(): Observable<any> {
     return of(this["Courses"])
+  }
+
+  public updateBreakdown() {
+    for (let term in this.terms){
+      for (let c of term) {
+        // the guts.  update this.breakdown here for each course
+      }
+    }
   }
 
 }

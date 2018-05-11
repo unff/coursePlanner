@@ -5,38 +5,39 @@
   </div>
   <div class="sidebarBlock">
     <div class="blockTitle">Total Credits:</div>
-    <div class="blockContent"><span id="tCredits">0</span>/120</div>
+    <div class="blockContent"><span id="tCredits">{{_courseListService.breakdown.totalCredits}}</span>/120</div>
   </div>
   <div class="sidebarBlock">
     <div class="blockTitle">Foundation:</div>
-    <div class="blockContent"><span id="fdnCourses">0</span>/3</div>
+    <div class="blockContent"><span id="fdnCourses">{{_courseListService.breakdown.foundation}}</span>/3</div>
   </div>
   <div class="sidebarBlock">
     <div class="blockTitle">Writing:</div>
-    <div class="blockContent"><span id="wrtCourses">0</span>/1</div>
+    <div class="blockContent"><span id="wrtCourses">{{_courseListService.breakdown.writing}}</span>/1</div>
   </div>
   <div class="sidebarBlock">
     <div class="blockTitle">Values:</div>
-    <div class="blockContent"><span id="valCourses">0</span>>/1</div>
+    <div class="blockContent"><span id="valCourses">{{_courseListService.breakdown.values}}</span>/1</div>
   </div>
   <div class="sidebarBlock">
     <div class="blockTitle">Civ Studies:</div>
-    <div class="blockContent"><span id="civCourses">0</span>/1</div>
+    <div class="blockContent"><span id="civCourses">{{_courseListService.breakdown.civ}}</span>/1</div>
   </div>
   <div class="sidebarBlock">
-    <div class="blockTitle">Disciplinary:</div>
-    <div class="blockContent"><span id="disCourses">0</span>/5</div>
-  </div>
-  <div class="sidebarBlock">
-    <div class="blockTitle">Humanities:</div>
-    <div class="blockContent"><span id="humCourses">0</span>/2</div>
-  </div>
-  <div class="sidebarBlock">
-    <div class="blockTitle">SBS:</div>
-    <div class="blockContent"><span id="sbsCourses">0</span>/1</div>
-  </div>
-  <div class="sidebarBlock">
-    <div class="blockTitle">NST:</div>
-    <div class="blockContent"><span id="nstCourses">0</span>/1</div>
+    <div class="blockTitle long">Disciplinary Areas of Knowledge:</div>
+    <div class="blockContent"><span id="disCourses">{{_courseListService.breakdown.disciplinary}}</span>/5</div>
+    <hr />
+    <div class="sidebarBlock subcat">
+      <div class="blockTitle">HUM:</div>
+      <div class="blockContent"><span id="humCourses">{{_courseListService.breakdown.humanities}}</span>/2</div>
+    </div>
+    <div class="sidebarBlock subcat">
+      <div class="blockTitle">SBS:</div>
+      <div class="blockContent"><span id="sbsCourses">{{_courseListService.breakdown.sbs}}</span>/2</div>
+    </div>
+    <div class="sidebarBlock subcat">
+      <div class="blockTitle">NST:</div>
+      <div class="blockContent"><span id="nstCourses">{{_courseListService.breakdown.nst}}</span>/1</div>
+    </div>
   </div>
 </div>
