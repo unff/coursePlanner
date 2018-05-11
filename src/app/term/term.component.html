@@ -1,6 +1,6 @@
 <div class="term">
   <div class="termHeader">
-    <h2 class="termTitle">{{title}} - {{dataModel.length}}</h2>
+    <h2 class="termTitle">{{title}}</h2>
   </div>
   <div class='container' [dragula]='"bag-courses"' [dragulaModel]="dataModel" [attr.data-id]="modelID">
     <div  id="{{c.id}}" [ngClass]="c.prefix == 'spacer' ? 'spacer' : 'course'"  *ngFor="let c of dataModel">
