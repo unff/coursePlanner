@@ -1,9 +1,9 @@
-## UoPeople course planner
+# UoPeople course planner
 ### (and eventually graduation calculator, just not yet)
 
-This is an Angular 6 application I did for practice. It's got a static data model and doesn't do anything fun with any external APIs.  
+This is an Angular 6 application I did for practice. It's got a static data model and doesn't do anything fun with any external APIs.  It's using ng2-dragula for the drag and drop organization, and dom-autoscroller to handle dragging past the edge of the window.
 
-### Installation
+### Local Installation
 ```
 git clone https://github.com/unff/coursePlanner.git  
 npm install
@@ -12,25 +12,14 @@ ng serve
 
 # Dev notes and ongoing tasks:
 
-look at appComponent: 
-```javascript 
-_dragulaService.setOptions('bag-courses', {  
-      copy: false,  
-      moves: (el:any, container:any, handle:any) => {  
-          
-        return el.classList.contains('foundation')? false : true;  
-      }  
-    })  
-```
-Use that logic to disable drag on any course that has not met it's pre-reqs.  
 
-### Dev Tasks  
+#### Dev Tasks  
 DONE: Incorporate dragulaModel to keep track of what is where?  possible? : dragulaModels term.courses and term.termCourses  
   
 DONE: Add a third bag div and test.  
 DONE: figured out the stupid spacers without breaking EVERYTHING.  Now I need to get rid of them once a course is populated.  
 DONE: Disallow courses with unmet pre-reqs to be moved.  
-DONE: F***ING SPACERS - GET RID OF THEM ONCE POPULATED  
+DONE: F*ING SPACERS - GET RID OF THEM ONCE POPULATED  
 DONE: Spacers should not be draggable!  
 DONE: Move all data to the service and share it among components.  
 DONE: Hover cursor thing to signify that it cant be moved.  
@@ -49,7 +38,19 @@ make sidebar work from Observables
 course cant exist in the same container as it's pre-req  
 if a course is removed, also remove any courses that have it as a prereq  
   
-### Notes:  
+#### Notes:  
+look at appComponent: 
+```javascript 
+_dragulaService.setOptions('bag-courses', {  
+      copy: false,  
+      moves: (el:any, container:any, handle:any) => {  
+          
+        return el.classList.contains('foundation')? false : true;  
+      }  
+    })  
+```
+Use that logic to disable drag on any course that has not met it's pre-reqs.  
+
 Add enough courses to fill (20?)  
   
 calculus wasn't processing because it's pre-req was index 0 and I was checking anything greater than zero.  swapped to -1.  
