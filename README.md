@@ -39,6 +39,8 @@ if a course is removed, also remove any courses that have it as a prereq
 improve styles on unmet prereqs on hover (hard to read)  
 
 #### Phase Two:
+Improve the UI. It doesn't flow as well as I'd like.
+See if it's possible to get the entire thing on one window without scrolling.
 incorporate persistence (localStorage or Chrome Storage or FireBase or something)  
 incorporate grade tracking  
 make the model react to grades (allow third course if GPA > 3.x)  
