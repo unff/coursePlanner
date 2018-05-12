@@ -36,12 +36,12 @@ DONE: make the course requirement layout more intuitive
 DONE: move sidebar data to courseServiceList? Maybe?    
 course cant exist in the same container as it's pre-req  
 if a course is removed, also remove any courses that have it as a prereq  
-improve styles on unmet prereqs on hover (hard to read)
+improve styles on unmet prereqs on hover (hard to read)  
 
 #### Phase Two:
-incorporate persistence (localStorage or Chrome Storage or FireBase or something)
-incorporate grade tracking
-make the model react to grades (allow third course if GPA > 3.x)
+incorporate persistence (localStorage or Chrome Storage or FireBase or something)  
+incorporate grade tracking  
+make the model react to grades (allow third course if GPA > 3.x)  
   
 #### Notes:  
 look at appComponent: 

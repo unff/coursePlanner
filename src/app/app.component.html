@@ -2,12 +2,14 @@
   <h1>
     {{ title }}
   </h1>
-  <h3>
+  <h2>
     {{ subtitle }}
-  </h3>
+  </h2>
+  <h3>Source Code: <a href="https://github.com/unff/coursePlanner">https://github.com/unff/coursePlanner</a></h3>
 </div>
 <div class="wrapper">
   <div class="left">
+    <!-- I really want to ngFor this bit, but I dont want a separate object to handle it. -->
     <app-term [title]="'First Term'" [dataModel]="_courselistservice.terms.t1Courses" [modelID]="'t1Courses'"></app-term>
     <app-term [title]="'Second Term'" [dataModel]="_courselistservice.terms.t2Courses" [modelID]="'t2Courses'"></app-term>
     <app-term [title]="'Third Term'" [dataModel]="_courselistservice.terms.t3Courses" [modelID]="'t3Courses'"></app-term>
