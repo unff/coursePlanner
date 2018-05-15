@@ -4,7 +4,7 @@ import { Observable, of } from 'rxjs';
 
 @Injectable()
 export class CourseListService {
-
+  public 
   constructor() { }
 
   

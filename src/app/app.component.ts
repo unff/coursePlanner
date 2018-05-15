@@ -88,11 +88,21 @@ export class AppComponent {
 
   private checkForMax(el, target, source, sibling) {
     // SPECIAL CASES
+    // COURSES ALWAYS ACCEPTS
     if (target.dataset.id == 'Courses') return true
+    // T1Courses NEVER ACCEPTS
     if (target.dataset.id == 't1Courses') return false
+    // T2Courses ONLY ACCEPTS 2
     if (target.dataset.id == 't2Courses' && this._courselistservice.terms["t2Courses"]
-        .filter(c => c.prefix != 'spacer').length > 1) return false
-    // NOT SO SPECIAL CASES
+    .filter(c => c.prefix != 'spacer').length > 1) return false
+    // THIS CONTAINER CONTAINS THE el'S PREREQ?
+    for (let c of this._courselistservice.terms[target.dataset.id]){
+      //if (c.id = 'spacer') continue // SKIP ALL spacerS
+      if (c.code != "" && (c.code == el.getElementsByClassName("footCenter")[0].innerText)) {
+        return false
+      }
+    }
+    // NOT SO SPECIAL CASES - THE REST
     return this._courselistservice.terms[target.dataset.id].length > 2 ? false : true
   }
 

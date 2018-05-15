@@ -34,18 +34,20 @@ DONE: sticky sidebar for credit counting
 DONE: turn sidebar into a component  
 DONE: make the course requirement layout more intuitive  
 DONE: move sidebar data to courseServiceList? Maybe?    
-course cant exist in the same container as it's pre-req  
-if a course is removed, also remove any courses that have it as a prereq  
-improve styles on unmet prereqs on hover (hard to read)  
+DONE: course cant exist in the same container as it's pre-req  
+TOO LAZY: if a course is removed, also remove any courses that have it as a prereq  
+DEFER TO ANOTHER PHASE: improve styles on unmet prereqs on hover (hard to read)  
 
 #### Phase Two:
-Improve the UI. It doesn't flow as well as I'd like.
-See if it's possible to get the entire thing on one window without scrolling.
 incorporate persistence (localStorage or Chrome Storage or FireBase or something)  
+Improve the UI. It doesn't flow as well as I'd like.  
+- See if it's possible to get the entire thing on one window without scrolling.  
 incorporate grade tracking  
 make the model react to grades (allow third course if GPA > 3.x)  
+The dragula model is doing really stupid things with spacers.  It's probably my fault. Watch the checkForMax() data for details.  
   
 #### Notes:  
+
 look at appComponent: 
 ```javascript 
 _dragulaService.setOptions('bag-courses', {  
